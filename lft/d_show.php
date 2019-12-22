@@ -72,7 +72,7 @@
 								<?php
 									echo "<input type='hidden' name='id' value={$data['showid']}>"; 
 								?>
-									<input type="submit" value="削除へ" name="confirm_delete">
+									<input type="submit" value="削除へ">
 								</form>
 							</div>
 							<div class="requirement">
