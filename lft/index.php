@@ -10,7 +10,7 @@ $_SESSION['id_judge']=true;
 
 
 try{
-		makeNewPdo();
+		$pdo=makeNewPdo();
 		$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); 
 		$st=$pdo->query("SELECT title FROM game");
 		while($games=$st->fetch()){
