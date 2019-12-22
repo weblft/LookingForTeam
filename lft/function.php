@@ -12,8 +12,7 @@ function makeNewPdo(){
 	$options = array(
 	PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
 	PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
-	PDO::MYSQL_ATTR_USE_BUFFERED_QUERY =>true,
-	);
+	PDO::MYSQL_ATTR_USE_BUFFERED_QUERY =>true,);
 	 return new PDO($dsn,$user,$password,$options);
 }
 
@@ -21,8 +20,7 @@ function makeNewPdo(){
 
 
 function makeRaandStr($length){
-	$str = array_merge(range('a', 'z'), range('0', '9'), range('A', 'Z"'));//array_mergedでrange()で生成したa~z,0~9,A~Zの配列をまとめた配列を作成する。。
-	
+	$str = array_merge(range('a', 'z'), range('0', '9'), range('A', 'Z"'));//array_mergedでrange()で生成したa~z,0~9,A~Zの配列をまとめた配列を作成する。。	
 	for ($i = 0; $i < $length; $i++) {
 		$r_str .= $str[rand(0, count($str)-1)];//$r_strに$lengthの長さ分だけランダムに$strの値を結合していく。
 	}	
