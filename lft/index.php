@@ -1,4 +1,5 @@
 <?php
+require('../vendor/autoload.php');
 require_once "function.php";
 session_start();
 $_SESSION['registed']=false;//confirm.phpから登録完了した後にconfirm.phpに戻れなくするためにfalseにする。
