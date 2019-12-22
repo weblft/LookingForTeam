@@ -42,5 +42,5 @@ try{
 	echo 'Connection failed: ';
 	die($e->getMessage());
 }
-//require "d_delete.php"
+require "d_delete.php"
 ?>
