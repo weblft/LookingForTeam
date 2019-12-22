@@ -68,7 +68,7 @@
 								<?php echo "平日の活動時間:".$data['W_start']."時〜".$data['W_end']."時<br>"; ?>
 								<?php echo "休日の活動時間:".$data['H_start']."時〜".$data['H_end']."時<br>"; ?>
 								<?php echo "ガチ度:".$data['gati'];?>
-								<form action="delete.php?$data['showid']" method="get">
+								<form action="delete.php" method="get">
 								<?php
 									echo "<input type='hidden' name='id' value={$data['showid']}>"; 
 								?>
