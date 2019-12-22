@@ -146,7 +146,7 @@
 						</select>
 						<br>
 						<?php  
-							$Dpass=makeRaandStr(6);/*６桁のパスを生成*/ 
+							$Dpass=makeRaandStr(6);/*Delete用パスを６桁のパスで生成*/ 
 							echo "<input type='hidden' name='pass' value={$Dpass}>";
 						?>
 						<input type="submit" name="submit" value="登録" onClick='return confirm("この内容で本当によろしいですか？");'>

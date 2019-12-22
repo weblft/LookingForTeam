@@ -9,6 +9,7 @@ $hstart=intval(htmlspecialchars($_POST['regist_H_start_time']));
 $hend=intval(htmlspecialchars($_POST['regist_H_end_time']));
 $pass=htmlspecialchars($_POST['pass']);
 $gati=intval(htmlspecialchars($_POST['regist_gati']));
+$acount=htmlspecialchars($_POST['game_id']);
 $check=0;
 $shownum=(string)uniqid(rand(1000,9999));//idを作成。
 $hash_pass = password_hash($pass, PASSWORD_DEFAULT);
