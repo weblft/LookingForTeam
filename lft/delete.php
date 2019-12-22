@@ -11,8 +11,6 @@ if(isset($_GET['id'])){
 
 
 
-
-
 try{
 	$pdo = makeNewPdo();
 	$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); 
@@ -21,15 +19,13 @@ try{
 		$st->bindValue(1,$_SESSION['confirm_id'],PDO::PARAM_STR);
 		$st->execute();
 		$pass=$st->fetch();
-	
 		if(password_verify($passwd,$pass[0])){
 			$st=$pdo->prepare("DELETE FROM registration WHERE showid=?");
 			$st->bindValue(1,$_SESSION['confirm_id'],PDO::PARAM_STR);//bindValueはsqlインジェクション対策
 			$st->execute();
-			$_SESSION['delete']=true;
-			
-		//	header('Location:confirm.php');
-		//	exit();
+			$_SESSION['delete']=true;	
+			header('Location:confirm.php');
+			exit();
 		}
 		else{
 			$_SESSION['passflag']=false;
