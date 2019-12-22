@@ -1,1 +1,1 @@
-web: vendor/bin/heroku-php-apache2 lft/index.php
+web: vendor/bin/heroku-php-apache2 /Users/user/Desktop/heroku-app/lft/index.php
