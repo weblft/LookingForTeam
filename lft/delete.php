@@ -4,10 +4,11 @@ session_start();
 
 $passwd=htmlspecialchars($_POST['passwd']);
 if(isset($_GET['id'])){
+	$_SESSION['passflag']=true;
 	$_SESSION['confirm_id']=$_GET['id'];
 	unset($_GET['id']);
 }
-$_SESSION['passflag']=true;
+
 
 
 
