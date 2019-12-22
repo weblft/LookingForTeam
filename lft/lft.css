@@ -1,0 +1,150 @@
+html , body{
+	background-color:#F5F5F5;
+	padding:0; 
+    margin:0; 
+	height: 100%;
+	
+}
+
+header {	
+	background-color:gray;
+	height:65px;
+	width:100%;
+	position :fixed;
+	top: 0;
+	z-index: 10;
+}
+header.container{
+	width: 1170px;
+	margin: 0 auto;
+}
+header .head_index{
+	float:left;
+	width:124px;
+	padding:20px 20px;
+	display:box;
+}
+.head _index a{
+	line-height: 65px;
+	padding: 0 25px;
+	display: block;	
+}
+
+header .head_name{
+	float:right;
+	padding:20px 25px;
+	color:white;
+}
+.body{
+	color:#8a2be2;
+	padding-top:90px;
+	text-align:center;
+}
+.main_title{
+	margin-top:80px;
+	
+}
+.search_condition p{
+	font-size:21px;
+}
+
+.search_condition form{
+	font-size:20px;
+}
+.search_condition select{
+	margin-bottom:15px;
+}	
+
+.regist_title{
+	padding-top:75px;
+	padding-bottom:40px;
+	text-align:center;
+	font-size:20px;
+}
+.regist_body{
+	margin-bottom:30px;
+	color:#8a2be2;
+}
+.regist_body .regist_condition{
+	margin-bottom:30px;
+}
+.regist_condition form{
+	font-size:23px;
+	text-align: center;
+}
+.regist_condition form textarea{
+	resize:none;
+	width:300px;
+	height:200px;
+}
+.confirm{
+	text-align: center;
+	color:#8a2be2;
+	padding-top:25%;
+	
+}
+.show_body{
+	color:#8a2be2;
+	
+	
+}
+.show_body .show_game_title{
+	padding-top:75px;
+	padding-bottom:20px;
+	text-align:center;
+	font-size:20px;
+	border-bottom:solid 1px gray;
+	
+}
+.show_contents{
+	width:100%;
+	}
+.show_id{
+	background-color:#3399FF;
+	color:white;
+	width:100%;
+	padding-left:30px;
+}
+.show_content{
+	border-bottom:solid 1px gray;
+	padding-top:20px;
+	padding-bottom:10px;
+	width:100%;
+	display:inline-block;
+	background-color:#D7EEFF;
+	padding-left:30px;
+}
+.show_content .detail{
+	float:left;
+	width:50%;
+	
+}
+.show_content .requirement{
+	float:right;
+	width:50%;
+}
+
+.delete{
+	padding-top:250px;
+	text-align:center;
+	color:#8a2be2;
+}
+
+footer{
+	background-color:gray;
+	width:100%;
+	height:65px;
+	margin-top: auto;
+}
+.footer_title {
+	font-size:18px;	
+	float:right;
+	padding-right:10px;
+	color:white;
+}
+.wrapper{
+	display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+	
+}
