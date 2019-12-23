@@ -12,8 +12,9 @@ $_SESSION['id_judge']=true;
 try{
 		$pdo=makeNewPdo();
 		$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); 
-		$st=$pdo->query("SELECT * FROM game");
+		$st=$pdo->query("SELECT title FROM game");
 		while($games=$st->fetch()){
+			echo 'test!';
 			$game_titles[]=$games;
 		}
 	
@@ -23,5 +24,5 @@ try{
 }
 
 
-require "d_index.php"
+//require "d_index.php"
 ?>
