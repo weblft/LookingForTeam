@@ -16,6 +16,7 @@ try{
 		while($games=$st->fetch()){
 			$game_titles[]=$games['title'];
 		}
+		print_r($game_title);
 	
 }catch(PDOException $e){
 	echo 'Connection failed: ';
@@ -23,5 +24,5 @@ try{
 }
 
 
-require "d_index.php"
+//require "d_index.php"
 ?>
