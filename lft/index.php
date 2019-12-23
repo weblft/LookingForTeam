@@ -16,6 +16,7 @@ try{
 		while($games=$st->fetch()){
 			echo 'test!';
 			$game_titles[]=$games;
+			echo $games;
 		}
 	
 }catch(PDOException $e){
