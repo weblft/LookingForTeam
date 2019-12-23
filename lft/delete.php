@@ -19,7 +19,7 @@ try{
 		$st->bindValue(1,$_SESSION['confirm_id'],PDO::PARAM_STR);
 		$st->execute();
 		$pass=$st->fetch();
-		if(password_verify($passwd,$pass[0])){
+		if(password_verify($passwd,$pass['pass'])){
 			$st=$pdo->prepare("DELETE FROM registration WHERE showid=?");
 			$st->bindValue(1,$_SESSION['confirm_id'],PDO::PARAM_STR);//bindValueはsqlインジェクション対策
 			$st->execute();
