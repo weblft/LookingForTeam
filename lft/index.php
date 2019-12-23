@@ -23,5 +23,5 @@ try{
 }
 
 
-//require "d_index.php"
+require "d_index.php"
 ?>
