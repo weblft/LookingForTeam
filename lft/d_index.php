@@ -33,8 +33,8 @@
 						<select name="search_title">
 							<option value="anything_title"checked>なんでも</option>
 							<?php
-							for($i=0;$i<count($game_title);$i++){
-								echo "<option value={$game_title[0][$i]}>".$game_title[0][$i]."</option>";
+							for($i=0;$i<count($game_titles);$i++){
+								echo "<option value={$game_titles[$i]}>".$game_titles[$i]."</option>";
 							}
 							?>
 						</select>

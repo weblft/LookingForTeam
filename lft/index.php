@@ -16,7 +16,6 @@ try{
 		while($games=$st->fetch()){
 			$game_titles[]=$games['title'];
 		}
-		print_r($game_titles);
 	
 }catch(PDOException $e){
 	echo 'Connection failed: ';
