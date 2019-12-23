@@ -34,7 +34,7 @@
 							<option value="anything_title"checked>なんでも</option>
 							<?php
 							for($i=0;$i<count($game_titles);$i++){
-								echo "<option value={$game_titles[0][$i]}>".$game_titles[0][$i]."</option>";
+								echo "<option value={$games[0]['title']}>".$games[0]['title']."</option>";
 							}
 							?>
 						</select>

@@ -14,9 +14,6 @@ try{
 		$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); 
 		$st=$pdo->query("SELECT title FROM game");
 		while($games=$st->fetch()){
-			echo 'test!';
-			$game_titles[]=$games[0][0];
-			print_r($games);
 		}
 	
 }catch(PDOException $e){
@@ -25,5 +22,5 @@ try{
 }
 
 
-//require "d_index.php"
+require "d_index.php"
 ?>
