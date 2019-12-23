@@ -15,8 +15,8 @@ try{
 		$st=$pdo->query("SELECT title FROM game");
 		while($games=$st->fetch()){
 			echo 'test!';
-			$game_titles[]=$games;
-			echo $games;
+			$game_titles[]=$games[0];
+			echo $games[0];
 		}
 	
 }catch(PDOException $e){
