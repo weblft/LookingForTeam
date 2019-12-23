@@ -1,8 +1,4 @@
 <?php
-/*function makeNewPdo(){
-	return new PDO('mysql:dbname=lft;host=localhost','root','root');
-	}
-	*/
 function makeNewPdo(){
 	$db = parse_url($_SERVER['CLEARDB_DATABASE_URL']);
 	$db['dbname'] = ltrim($db['path'], '/');

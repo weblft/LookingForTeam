@@ -4,7 +4,7 @@ session_start();
 $_SESSION['registed']=true;
 
 
-require "t_confirm.php";
+require "d_confirm.php";
 
 ?>
 

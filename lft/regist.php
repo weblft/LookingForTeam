@@ -1,19 +1,19 @@
 <?php
 require_once "function.php";
-$title=htmlspecialchars($_POST['regist_title']);
-$content=nl2br(htmlspecialchars($_POST['regist_text']),false);
-$age=intval(htmlspecialchars($_POST['regist_age']));
-$wstart=intval(htmlspecialchars($_POST['regist_W_start_time']));
-$wend=intval(htmlspecialchars($_POST['regist_W_end_time']));
-$hstart=intval(htmlspecialchars($_POST['regist_H_start_time']));
-$hend=intval(htmlspecialchars($_POST['regist_H_end_time']));
-$pass=htmlspecialchars($_POST['pass']);
-$gati=intval(htmlspecialchars($_POST['regist_gati']));
-$acount=htmlspecialchars($_POST['game_id']);
-$check=0;
-$shownum=(string)uniqid(rand(1000,9999));//idを作成。
-$hash_pass = password_hash($pass, PASSWORD_DEFAULT);
-$date=date("Y/m/d H:i:s");
+$title=htmlspecialchars($_POST['regist_title']);//登録するタイトル
+$content=nl2br(htmlspecialchars($_POST['regist_text']),false);//募集要項の内容
+$age=intval(htmlspecialchars($_POST['regist_age']));//年齢
+$wstart=intval(htmlspecialchars($_POST['regist_W_start_time']));//平日の開始時刻
+$wend=intval(htmlspecialchars($_POST['regist_W_end_time']));//平日の終了時刻
+$hstart=intval(htmlspecialchars($_POST['regist_H_start_time']));//休日の開始時刻
+$hend=intval(htmlspecialchars($_POST['regist_H_end_time']));//休日の終了時刻
+$pass=htmlspecialchars($_POST['pass']);//削除用パスワード
+$gati=intval(htmlspecialchars($_POST['regist_gati']));//ガチ度
+$acount=htmlspecialchars($_POST['game_id']);//ゲームアカウント
+$check=0;//削除用チェック
+$shownum=(string)uniqid(rand(1000,9999));//idを作成。重複しないように
+$hash_pass = password_hash($pass, PASSWORD_DEFAULT);//パスをハッシュ化
+$date=date("Y/m/d H:i:s");//日時
 
 
 
