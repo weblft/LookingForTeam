@@ -21,7 +21,7 @@ try{
 
 	$st=$pdo->query("SELECT title FROM game");
 		while($games=$st->fetch()){
-			$game_titles[]=$games;
+			$game_titles[]=$games['title'];
 		}
 	if($age==-1 && $wstart==-1&& $hstart==-1&& $gati==-1){
 		$st2=$pdo->query("SELECT * FROM registration ORDER BY num DESC");	
