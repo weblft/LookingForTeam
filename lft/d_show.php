@@ -26,8 +26,8 @@
 						}
 						else{
 							for($i=0;$i<count($game_titles);$i++){
-								if($_GET['search_title']==$game_titles[0][$i]){
-									echo "<h1>{$game_titles[0][$i]}</h1>";
+								if($_GET['search_title']==$game_titles[$i]){
+									echo "<h1>{$game_titles[$i]}</h1>";
 								}
 							}
 						}
