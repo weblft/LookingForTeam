@@ -10,6 +10,7 @@
 			<div class="container">
 				<div class="head_index">
 					<a href ="index.php">TOP</a><!--TOP画面に飛ばす -->
+					<a href="search.php">検索</a><!--検索画面に飛ばす -->
 				</div>	
 				<div class="head_name">
 					LFT
