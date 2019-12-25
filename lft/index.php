@@ -10,4 +10,6 @@ $_SESSION['id_judge']=true;
 $logo='logo.png';
 $upper_img='upper_select.png';
 $lower_img='lower_select.png';
+
+require 'd_index.php'
 ?>
