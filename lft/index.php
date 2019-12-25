@@ -6,8 +6,15 @@ $_SESSION['delete']=false;//confirm.phpから削除完了した後にconfirm.php
 $_SESSION['h_error']=true;//
 $_SESSION['w_error']=true;//
 $_SESSION['id_judge']=true;
-$logo= exif_read_data('logo.png');
-$upper_img= exif_read_data('upper_select.png');
-$lower_img= exif_read_data('lower_select.png');
+
+$logo='logo.png';
+$upper_img='upper_select.png';
+$lower_img='lower_select.png';
+$logo_date= exif_read_data($logo);
+$upper_img_date= exif_read_data($upper_img);
+$lower_img_date= exif_read_data($lower_img);
+imageOrientation($logo, $logo_date);
+imageOrientation($upper_img, $upper_img_date);
+imageOrientation($lower_img,$lower_img_date);
 require 'd_index.php';
 ?>
