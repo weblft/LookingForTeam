@@ -27,7 +27,7 @@
 					<div class='upper_select'>	
 						<div class='box'>
 							<a href='search.php'>
-								<?php echo <'img src ='.$upper_img.'>';?>
+								<?php echo '<img src ='.$upper_img.'>';?>
 							</a>
 						</div>
 					</div>
