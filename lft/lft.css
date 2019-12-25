@@ -74,11 +74,15 @@ header .head_name{
 	top:3px;
 	box-shadow:none;
 }
-.box a img{
-	width:30%;
+.box a p{
+	font-size:20px;
+	color:#006699;
+	margin:5px auto;
+	font-family:'メイリオ','ヒラギノ',sans-serif;
 }
 .box a{
 	display:block;	
+	text-decoration: none;
 }
 .search_body{
 	color:#8a2be2;

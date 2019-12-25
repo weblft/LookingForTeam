@@ -7,9 +7,6 @@ $_SESSION['h_error']=true;//
 $_SESSION['w_error']=true;//
 $_SESSION['id_judge']=true;
 
-$logo='logo.png';
-$upper_img='upper_select.png';
-$lower_img='lower_select.png';
 
-require 'd_index.php'
+require 'd_index.php';
 ?>
