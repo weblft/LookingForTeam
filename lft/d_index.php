@@ -20,7 +20,7 @@
 		<div class='wrapper'>
 			<div class='main_body'>
 				<div class='main_title'>
-					<img src ='logo.png'>
+					<img src ='logo.png' alt='Looking For Team'>
 				</div>
 				<h1>チームを探すか登録するかを選んでください</h1>
 				<div class='main_select'>
