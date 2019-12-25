@@ -43,10 +43,13 @@ header .head_name{
 	text-align:center;
 	
 }
+.main_body h1{
+	padding-bottom:30px;
+}
 .main_title{
 	padding-bottom:60px;
 	padding-top:60px;
-	
+	margin:0 20px;
 }
 .main_title img{
 	width:100%;
