@@ -10,11 +10,11 @@ $_SESSION['id_judge']=true;
 $logo='logo.png';
 $upper_img='upper_select.png';
 $lower_img='lower_select.png';
-$logo_date= exif_read_data($logo);
-$upper_img_date= exif_read_data($upper_img);
-$lower_img_date= exif_read_data($lower_img);
-imageOrientation($logo, $logo_date[‘Orientation’]);
-imageOrientation($upper_img, $upper_img_date[‘Orientation’]);
-imageOrientation($lower_img,$lower_img_date[‘Orientation’]);
+$logo_data= exif_read_data($logo);
+$upper_img_data= exif_read_data($upper_img);
+$lower_img_data= exif_read_data($lower_img);
+imageOrientation($logo, $logo_data['Orientation']);
+imageOrientation($upper_img, $upper_img_data['Orientation']);
+imageOrientation($lower_img,$lower_img_data['Orientation']);
 require 'd_index.php';
 ?>
