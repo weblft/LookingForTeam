@@ -20,14 +20,14 @@
 		<div class='wrapper'>
 			<div class='main_body'>
 				<div class='main_title'>
-					<?php echo	'<img src ='.$logo.'alt="Looking For Team">'; ?>
+					<?php echo	'<img src ='.$logo.'alt="Looking For Team">'?>
 				</div>
 				<h1>チームを探すか登録するかを選んでください</h1>
 				<div class='main_select'>
 					<div class='upper_select'>	
 						<div class='box'>
 							<a href='search.php'>
-								<?php echo <'img src ='.$upper_img.'>'; ?>
+								<?php echo <'img src ='.$upper_img.'>';?>
 							</a>
 						</div>
 					</div>

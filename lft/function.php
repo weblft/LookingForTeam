@@ -23,53 +23,6 @@ function makeRaandStr($length){
 	return $r_str;	
 }
 
-function imageOrientation($filename, $orientation){
-	//画像ロード
-	$image = imagecreatefrompng($filename);
-	
-	//回転角度
-	$degrees = 0;
-	switch($orientation) {
-		case 1:		//回転なし（↑）
-		return;
-		case 8:		//右に90度（→）
-		$degrees = 90;
-		break;
-		case 3:		//180度回転（↓）
-		$degrees = 180;
-		break;
-		case 6:		//右に270度回転（←）
-		$degrees = 270;
-		break;
-		case 2:		//反転　（↑）
-		$mode = IMG_FLIP_HORIZONTAL;
-		break;
-		case 7:		//反転して右90度（→）
-		$degrees = 90;
-		$mode = IMG_FLIP_HORIZONTAL;
-		break;
-		case 4:		//反転して180度なんだけど縦反転と同じ（↓）
-		$mode = IMG_FLIP_VERTICAL;
-		break;
-		case 5:		//反転して270度（←）
-		$degrees = 270;
-		$mode = IMG_FLIP_HORIZONTAL;
-		break;
-	}
-	//反転(2,7,4,5)
-	if (isset($mode)) {
-		$image = imageflip($image, $mode);
-	}
-	//回転(8,3,6,7,5)
-	if ($degrees > 0) {
-		$image = imagerotate($image, $degrees, 0);
-	}
-	//保存
-	Imagepng($image, $filename);
-	//メモリ解放
-	imagedestroy($image);
-}
-
 
 
 ?>
