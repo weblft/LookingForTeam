@@ -13,8 +13,8 @@ $lower_img='lower_select.png';
 $logo_date= exif_read_data($logo);
 $upper_img_date= exif_read_data($upper_img);
 $lower_img_date= exif_read_data($lower_img);
-imageOrientation($logo, $logo_date);
-imageOrientation($upper_img, $upper_img_date);
-imageOrientation($lower_img,$lower_img_date);
+imageOrientation($logo, $logo_date[‘Orientation’]);
+imageOrientation($upper_img, $upper_img_date[‘Orientation’]);
+imageOrientation($lower_img,$lower_img_date[‘Orientation’]);
 require 'd_index.php';
 ?>
