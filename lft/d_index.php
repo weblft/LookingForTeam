@@ -20,7 +20,8 @@
 		<div class='wrapper'>
 			<div class='main_body'>
 				<div class='main_title'>
-					<?php echo	'<img src ='.$logo.'alt="Looking For Team">'?>
+					<?php echo	'<img src ='.$logo.' alt="Looking For Team">'?>
+							                 $logo
 				</div>
 				<h1>チームを探すか登録するかを選んでください</h1>
 				<div class='main_select'>
