@@ -30,7 +30,7 @@ try{
 		$st->bindValue(1,$_SESSION['confirm_id'],PDO::PARAM_STR);
 		$st->execute();
 		$pass=$st->fetch();
-		if(password_verify($passwd,$pass[0])){
+		if(password_verify($passwd,$pass['pass'])){
 			$_SESSION['passflag']=true;
 			$tweetflag=true;
 		}
