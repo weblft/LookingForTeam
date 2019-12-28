@@ -6,7 +6,9 @@ $hstart=htmlspecialchars($_GET['search_H_start_time']);
 $age=htmlspecialchars($_GET['search_age']);
 $gati=htmlspecialchars($_GET['gati']);
 //$id="";
-$id=htmlspecialchars($_GET['id']);
+if($_GET['id']){
+	$id=htmlspecialchars($_GET['id']);
+}
 session_start();
 
 if (isset($_SESSION['delete']) && $_SESSION['delete'] == true){
