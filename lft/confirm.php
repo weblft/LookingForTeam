@@ -6,7 +6,7 @@ $title=$_SESSION['regist_title'];//変更
 $id=$_SESSION['regist_id'];//変更
 
 
-$message=$title.'のチームメンバーの募集を開始しました！'."\n".'詳しくはこちら'."\n".'#LookingForTeam'."\n#".$title;
+$message=$title.'のチームメンバーの募集を開始しました！'."\n".'詳しくはこちら'."\n".'#LookingForTeam'."\n#".$title."\n";
 //$message=$title.'のチームメンバーの募集を開始しました！'."\n".'詳しくはこちら'."\n".'localhost/php/lft/show.php?search_title='.$title.'&id='.$id."\n".'#LookingForTeam'."\n#".$title;
 $encodeMessage=urlencode($message);
 $url="https://weblft.herokuapp.com/show.php?search_title={$title}&id={$id}";
