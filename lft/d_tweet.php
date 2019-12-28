@@ -19,8 +19,8 @@
 		</header>
 		<div class="wrapper">
 			<div class="tweet">
-				<form action="tweet.php" method="post">
-					<?php if($tweetflag==false): ?>
+				<?php if($tweetflag==false): ?>
+					<form action="tweet.php" method="post">
 						<h1>あなたのパスを入力してください</h1>
 						<?php
 						if($_SESSION['passflag']==false){
@@ -30,12 +30,12 @@
 						?>
 						<input type="text" name="passwd">
 						<input type="submit" value="パスを送信する" name="tweet">
-						</form>
-					<?php else:?>
+					</form>
+				<?php else:?>
 						<script type="text/javascript" src="http://twitter.com/intent/tweet?http://platform.twitter.com/widgets.js"></script>
 						<?php echo '<a href=http://twitter.com/intent/tweet?original_referer='.$encodeUrl.'&url='.$encodeUrl.'&text='.$encodeMessage.'>twitterに投稿する</a>'; ?>
 						<?php echo '<br>'.$message."<br>";?>
-					<?php endif?>
+				<?php endif?>
 			</div>
 			<footer>
 				<div class="footer_title">

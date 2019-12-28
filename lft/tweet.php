@@ -38,8 +38,6 @@ try{
 			$_SESSION['passflag']=false;
 		}
 	}
-	
-	
 }catch(PDOException $e){
 	echo 'Connection failed: ';
 	die($e->getMessage());

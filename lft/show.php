@@ -5,7 +5,7 @@ $wstart=htmlspecialchars($_GET['search_W_start_time']);
 $hstart=htmlspecialchars($_GET['search_H_start_time']);
 $age=htmlspecialchars($_GET['search_age']);
 $gati=htmlspecialchars($_GET['gati']);
-$id="";
+//$id="";
 $id=htmlspecialchars($_GET['id']);
 session_start();
 

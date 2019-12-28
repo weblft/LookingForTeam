@@ -6,7 +6,6 @@
 		<link rel="stylesheet" href="lft.css">
 	</head>
 	<div class="confirm">
-		<?php session_start()?>
 		<?php if($_SESSION['delete']!=true): ?>
 			<h1>登録完了です！</h1>
 			あなたのパスです。控えておいてください。<br>
