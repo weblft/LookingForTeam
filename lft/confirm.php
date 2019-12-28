@@ -11,7 +11,7 @@ $message=$title.'のチームメンバーの募集を開始しました！'."\n"
 $encodeMessage=urlencode($message);
 $url="https://weblft.herokuapp.com/show.php?search_title={$title}&id={$id}";
 $encodeUrl=urlencode($url);
-require "t_confirm.php";
+require "d_confirm.php";
 
 ?>
 
