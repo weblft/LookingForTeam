@@ -9,10 +9,12 @@
 		<?php session_start()?>
 		<?php if($_SESSION['delete']!=true): ?>
 			<h1>登録完了です！</h1>
-			削除用パスです。控えておいてください。<br>
+			あなたのパスです。控えておいてください。<br>
 			<?php echo $_SESSION['regist_pass'];?>
+			<script type="text/javascript" src="http://twitter.com/intent/tweet?http://platform.twitter.com/widgets.js"></script>
+			<?php echo '<a href=http://twitter.com/intent/tweet?original_referer='.$encodeUrl.'&url='.$encodeUrl.'&text='.$encodeMessage.'>この投稿をツイートする</a>'; ?>
 		<?php else:?>
-		<h1> 削除完了です！</h1>
+			<h1> 削除完了です！</h1>
 		<?php endif ?>
 		<form action="index.php" method="post">
 			<input type="submit" value="topへ"> 

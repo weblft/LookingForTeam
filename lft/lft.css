@@ -41,7 +41,7 @@ header .head_name{
 	padding-top:90px;
 	padding-bottom:50px;
 	text-align:center;
-	
+	margin:0 20px;
 }
 .main_body h1{
 	padding-bottom:30px;
@@ -49,13 +49,14 @@ header .head_name{
 .main_title{
 	padding-bottom:40px;
 	padding-top:60px;
-	margin:0 20px;
+	
 }
 .main_title img{
 	width:100%;
 	max-width:640px;
 	height:auto;
 	max-height:480px
+
 }
 .upper_select {
 	text-align:center;
@@ -203,4 +204,9 @@ footer{
 	display: flex;
 	flex-direction: column;
 	min-height: 100vh;
+}
+.tweet{
+	padding-top:250px;
+	text-align:center;
+	color:#8a2be2;		
 }

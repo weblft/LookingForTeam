@@ -22,7 +22,7 @@
 				<div class="show_game_title">
 					<?php
 						if($_GET['search_title']=="anything_title"){
-						echo "<h1>全てのゲームの募集<h1>";
+							echo "<h1>全てのゲームの募集<h1>";
 						}
 						else{
 							for($i=0;$i<count($game_titles);$i++){
@@ -42,7 +42,6 @@
 						<div class=show_content>
 							<div class="detail">
 								<?php echo "アカウント名:".$data['acount_name']."<br>";?>
-								
 								<?php echo $data['title']."<br>"; ?>
 								<?php
 									if($data['age']==10){
@@ -73,6 +72,13 @@
 									echo "<input type='hidden' name='id' value={$data['showid']}>"; 
 								?>
 									<input type="submit" value="削除へ">
+								</form>
+								<form action="tweet.php" method="get">
+									<?php
+									echo "<input type='hidden' name='id' value={$data['showid']}>";
+									echo "<input type='hidden' name='title' value={$data['title']}>";
+									?>
+									<input type="submit" value="tweet" name="tweet">
 								</form>
 							</div>
 							<div class="requirement">

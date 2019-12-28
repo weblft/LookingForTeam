@@ -65,6 +65,9 @@ try{
 		$st->bindValue(14,$date,PDO::PARAM_STR);
 		$st->execute();
 		$_SESSION['regist_pass']=$pass;//確認ようのパスをconfirm.phpに飛ばすためのセッション
+		$_SESSION['regist_title']=$title;//
+		$_SESSION['regist_id']=$shownum;//
+		
 		header('Location:confirm.php');
 		exit();
 		
