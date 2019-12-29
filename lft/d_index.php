@@ -4,6 +4,7 @@
 		<meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=0.7">
 		<title>Looking For Team</title>
 		<link rel="stylesheet" href="lft.css">
+		<?php header("Content-Type: image/png"); ?>
 	</head>
 	<body>
 		<header>
