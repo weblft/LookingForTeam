@@ -21,7 +21,14 @@
 			<div class="main_body">
 				<div class="main_title">
 					<?php 
-						echo $result['Body'];
+						try{
+							$result = $s3->getObject($params);
+							header("Content-Type:image/png");
+							echo $result['Body'];
+						}
+						catch(S3Exception $e){
+							var_dump($e -> getMessage());
+						}   
 					?>
 				</div>
 				<h1>チームを探すか登録するかを選んでください</h1>

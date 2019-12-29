@@ -20,30 +20,6 @@ $s3 = new S3Client([
 'version' => $bucket_version,
 ]);
 
-$params = [
-'Bucket' => $bucket_name,
-'Key' => 'logo.png',
-];
-
-try{
-	$result = $s3->getObject($params);
-	header("Content-Type:image/png");
-	/*$len = $result['ContentLength'];
-	
-	//ファイルを表示
-	header("Content-Type: {$result['ContentType']}");
-	echo $result['Body'];
-	
-	//ファイルダウンロード
-	header('Content-Type: application/force-download;');
-	header('Content-Length: '.$len);
-	header('Content-Disposition: attachment; filename="sample.jpg"');
-	echo $result['Body'];
-	*/
-}catch(S3Exception $e){
-	var_dump($e -> getMessage());
-}   
-
 
 
 ?>
