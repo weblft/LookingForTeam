@@ -21,5 +21,10 @@ $s3 = new S3Client([
 ]);
 
 
+$params = [
+'Bucket' => $bucket_name,
+'Key' => 'logo.png',
+];
+
 
 ?>
