@@ -16,8 +16,7 @@ $params = [
 
 try{
 	$result = $s3->getObject($params);
-	header("Content-Type: {$result['ContentType']}");
-	echo $result['Body'];
+	
 }
 catch(S3Exception $e){
 	var_dump($e -> getMessage());
