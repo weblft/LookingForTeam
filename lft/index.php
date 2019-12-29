@@ -1,6 +1,6 @@
 <?php
 require_once "function.php";
-require_once 'PhoneContoroller.php';
+require_once 'PhotosContoroller.php';
 session_start();
 $_SESSION['registed']=false;//confirm.phpから登録完了した後にconfirm.phpに戻れなくするためにfalseにする。
 $_SESSION['delete']=false;//confirm.phpから削除完了した後にconfirm.phpに戻れなくするためにfalseにする。
