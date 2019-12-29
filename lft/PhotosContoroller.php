@@ -1,5 +1,6 @@
 <?php 
-require './vendor/autoload.php';
+//SDKの読み込み
+require_once("aws.phar");
 use Aws\S3\S3Client;
 use Aws\CommandPool;
 
