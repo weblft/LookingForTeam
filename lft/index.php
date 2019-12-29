@@ -13,8 +13,7 @@ $params = [
 ];
 
 try{
-	$result = $s3->getObject($params);	
-
+	$result = $s3->getObject($params);
 	/*$len = $result['ContentLength'];
 	
 	//ファイルを表示

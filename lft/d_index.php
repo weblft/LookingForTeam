@@ -21,7 +21,7 @@
 			<div class="main_body">
 				<div class="main_title">
 					<?php 
-						header("Content-Type: {$result['ContentType']}");
+					//	header("Content-Type: {$result['ContentType']}");
 					//	echo $result['Body'];
 					?>
 				</div>
