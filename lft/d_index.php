@@ -21,8 +21,8 @@
 			<div class="main_body">
 				<div class="main_title">
 					<?php 
-					//	header("Content-Type: {$result['ContentType']}");
-					//	echo $result['Body'];
+					header("Content-Type:image/png");
+						echo $result['Body'];
 					?>
 				</div>
 				<h1>チームを探すか登録するかを選んでください</h1>
