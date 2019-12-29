@@ -26,7 +26,8 @@ function makeRaandStr($length){
 function showPhotos($s3,$params){
 	try{
 		$result = $s3->getObject($params);
-		return header("Content-Type: {$result['ContentType']}");
+		return $result['ContentType'];
+		//return header("Content-Type: {$result['ContentType']}");
 		//return $result['Body'];
 	}
 	catch(S3Exception $e){
