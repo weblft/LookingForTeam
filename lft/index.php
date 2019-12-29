@@ -14,6 +14,7 @@ $params = [
 
 try{
 	$result = $s3->getObject($params);	
+	header("Content-Type: {$result['ContentType']}");
 	/*$len = $result['ContentLength'];
 	
 	//ファイルを表示
