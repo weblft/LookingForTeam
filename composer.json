@@ -2,6 +2,7 @@
     "require": {
       "php": "~7.0",
       "ext-mbstring": "*",
-	  "ext-exif":"*"
+	  "ext-exif":"*",
+	  "aws/aws-sdk-php": "3.*"
     }
 }
