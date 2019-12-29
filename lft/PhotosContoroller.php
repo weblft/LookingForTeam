@@ -10,7 +10,7 @@ $credentials = [
 ];
 
 $bucket_version = 'latest';
-$bucket_region = 'アジアパシフィック';
+$bucket_region = 'ap-northeast-1';
 $bucket_name = 'my-project-weblft';
 
 
