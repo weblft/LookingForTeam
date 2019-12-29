@@ -4,7 +4,6 @@
 		<meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=0.7">
 		<title>Looking For Team</title>
 		<link rel="stylesheet" href="lft.css">
-		<?php header("Content-Type: image/png"); ?>
 	</head>
 	<body>
 		<header>
@@ -21,9 +20,7 @@
 		<div class="wrapper">
 			<div class="main_body">
 				<div class="main_title">
-					<?php 
-					echo showPhotos($s3,$params);
-					?>
+					<?php echo $image; ?>
 				</div>
 				<h1>チームを探すか登録するかを選んでください</h1>
 				<div class="main_select">

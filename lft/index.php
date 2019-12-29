@@ -9,6 +9,15 @@ $_SESSION['w_error']=true;//
 $_SESSION['id_judge']=true;
 
 
+try{
+	 $result = $s3->getObject($params);
+	header('Content-type: image/png');
+	$image=$result['Body'];
+}
+catch(S3Exception $e){
+	var_dump($e -> getMessage());
+} 
+
 require 'd_index.php';
 
 ?>
