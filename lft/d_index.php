@@ -22,7 +22,7 @@
 				<div class="main_title">
 					<?php 
 						header("Content-Type: {$result['ContentType']}");
-						echo $result['Body'];
+					//	echo $result['Body'];
 					?>
 				</div>
 				<h1>チームを探すか登録するかを選んでください</h1>
