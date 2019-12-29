@@ -21,14 +21,9 @@
 			<div class="main_body">
 				<div class="main_title">
 					<?php 
-						try{
-							$result = $s3->getObject($params);
-							//header("Content-Type:image/png");
-							echo $result['Body'];
-						}
-						catch(S3Exception $e){
-							var_dump($e -> getMessage());
-						}   
+					header("Content-Type: {$result['ContentType']}");
+					echo $result['Body'];
+					header("Content-type: text/html; charset=utf-8");
 					?>
 				</div>
 				<h1>チームを探すか登録するかを選んでください</h1>
