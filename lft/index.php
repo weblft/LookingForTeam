@@ -12,7 +12,7 @@ $_SESSION['id_judge']=true;
 try{
 	 $result = $s3->getObject($params);
 	header('Content-type: image/png');
-	$image=$result['Body'];
+	echo $image=$result['Body'];
 }
 catch(S3Exception $e){
 	var_dump($e -> getMessage());
