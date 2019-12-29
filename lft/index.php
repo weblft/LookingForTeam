@@ -13,9 +13,9 @@ $params = [
 'Key' => 'logo.png',
 ];
 
-try{
+/*try{
 	$result = $s3->getObject($params);
-	header("Content-Type:image/png");
+	//header("Content-Type:image/png");
 	/*$len = $result['ContentLength'];
 	
 	//ファイルを表示
@@ -28,10 +28,6 @@ try{
 	header('Content-Disposition: attachment; filename="sample.jpg"');
 	echo $result['Body'];
 	*/
-}catch(S3Exception $e){
-	var_dump($e -> getMessage());
-}   
-
 
 
 
