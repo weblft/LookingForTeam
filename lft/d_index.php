@@ -21,7 +21,7 @@
 			<div class="main_body">
 				<div class="main_title">
 					<?php 
-					 showPhotos($s3,$params);
+					echo showPhotos($s3,$params);
 					?>
 				</div>
 				<h1>チームを探すか登録するかを選んでください</h1>

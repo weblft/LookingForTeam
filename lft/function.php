@@ -27,7 +27,7 @@ function showPhotos($s3,$params){
 	try{
 		$result = $s3->getObject($params);
 		header("Content-Type: {$result['ContentType']}");
-		return echo $result['Body'];
+		return $result['Body'];
 	}
 	catch(S3Exception $e){
 		var_dump($e -> getMessage());
