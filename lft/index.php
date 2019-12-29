@@ -15,7 +15,7 @@ $params = [
 try{
 	$result = $s3->getObject($params);
 	header("Content-Type:image/png");
-	echo $result['Body'];
+
 	/*$len = $result['ContentLength'];
 	
 	//ファイルを表示
@@ -32,6 +32,6 @@ try{
 	var_dump($e -> getMessage());
 }   
 
-//require 'd_index.php';
+require 'd_index.php';
 
 ?>

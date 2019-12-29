@@ -21,7 +21,6 @@
 			<div class="main_body">
 				<div class="main_title">
 					<?php 
-					header("Content-Type:image/png");
 						echo $result['Body'];
 					?>
 				</div>
