@@ -9,7 +9,7 @@ $_SESSION['w_error']=true;//
 $_SESSION['id_judge']=true;
 $params = [
 'Bucket' => $bucket_name,
-'Key' => 's3/logo.png',
+'Key' => 'logo.png',
 ];
 
 try{
