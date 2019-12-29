@@ -6,7 +6,7 @@ $_SESSION['delete']=false;//confirm.phpから削除完了した後にconfirm.php
 $_SESSION['h_error']=true;//
 $_SESSION['w_error']=true;//
 $_SESSION['id_judge']=true;
+echo date_default_timezone_get();
 
-
-require 'd_index.php';
+//require 'd_index.php';
 ?>
