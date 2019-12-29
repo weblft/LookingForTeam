@@ -13,6 +13,8 @@ try{
 	 $result = $s3->getObject($params);
 	header('Content-type: image/png');
 	echo $image=$result['Body'];
+	echo $image;
+	echo $image;
 }
 catch(S3Exception $e){
 	var_dump($e -> getMessage());
