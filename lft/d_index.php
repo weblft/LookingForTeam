@@ -24,7 +24,7 @@
 						try{
 							$result = $s3->getObject($params);
 							//header("Content-Type:image/png");
-							//echo $result['Body'];
+							echo $result['Body'];
 						}
 						catch(S3Exception $e){
 							var_dump($e -> getMessage());
