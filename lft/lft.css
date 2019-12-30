@@ -210,3 +210,6 @@ footer{
 	text-align:center;
 	color:#8a2be2;		
 }
+	.tweet_btn input{
+		font-family: FontAwesome;
+	}

@@ -79,7 +79,9 @@
 								echo "<input type='hidden' name='id' value={$data['showid']}>";
 								echo "<input type='hidden' name='title' value={$data['title']}>";
 								?>
-								<input type="submit" class='fab fa-twitter' name='tweet'>
+								<div class='tweet_btn'>
+									<input type="submit" value='f099' name='tweet'>
+								</div>
 							</form>
 							</div>
 							<div class="requirement">
