@@ -76,12 +76,10 @@
 								</form>
 							<form action="tweet.php" method="get">
 								<?php
-								echo "<input type='hidden' name='id' value={$data['showid']}>";
-								echo "<input type='hidden' name='title' value={$data['title']}>";
+									echo "<input type='hidden' name='id' value={$data['showid']}>";
+									echo "<input type='hidden' name='title' value={$data['title']}>";
 								?>
-								<div class='tweet_btn'>
-									<input type="submit" value='&#f099' class="fas" name='tweet'>
-								</div>
+									<input type="submit" value="&#f099" class="fas" name='tweet'>
 							</form>
 							</div>
 							<div class="requirement">
