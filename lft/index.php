@@ -12,9 +12,8 @@ $_SESSION['id_judge']=true;
 try{
 	 $result = $s3->getObject($params);
 	header('Content-type: image/png');
-	echo $image=$result['Body'];
-	echo $image;
-	echo $image;
+	//echo $image=$result['Body'];//うまく動かないので後で直す
+	
 }
 catch(S3Exception $e){
 	var_dump($e -> getMessage());
