@@ -80,7 +80,7 @@
 									echo "<input type='hidden' name='title' value={$data['title']}>";
 								?>
 								<button type="submit">
-									<i class="fas fa-twitter" name="tweet"></i> 
+									<i class="fab fa-twitter" name="tweet"></i> 
 								</button>
 							</form>
 							</div>
