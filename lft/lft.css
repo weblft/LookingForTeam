@@ -210,9 +210,8 @@ footer{
 	text-align:center;
 	color:#8a2be2;		
 }
-form button{
-	color:blue;	
-}
+
 .fa-twitter{
 	color:white;	
+	background-color:blue;
 }
