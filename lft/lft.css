@@ -212,5 +212,6 @@ footer{
 }
 
 	input{
-	font-family: "Font Awesome 5 Free"; /*←ココ！！！！！！！*/
+		font-family: "Font Awesome 5 Free"; 
+		font-weight: 900; 
 	}
