@@ -34,7 +34,6 @@
 				<?php else:?>
 						<script type="text/javascript" src="http://twitter.com/intent/tweet?http://platform.twitter.com/widgets.js"></script>
 						<?php echo '<a href=http://twitter.com/intent/tweet?original_referer='.$encodeUrl.'&url='.$encodeUrl.'&text='.$encodeMessage.'>twitterに投稿する</a>'; ?>
-						<?php echo '<br>'.$message."<br>";?>
 				<?php endif?>
 			</div>
 			<footer>
