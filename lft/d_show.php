@@ -4,7 +4,7 @@
 		<meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=0.7">
 		<title>Looking For Team</title>
 		<link rel="stylesheet" href="lft.css">
-		<link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css" integrity="sha384-REHJTs1r2ErKBuJB0fCK99gCYsVjwxHrSU0N7I1zl9vZbggVJXRMsv/sLlOAGb4M" crossorigin="anonymous">
 	</head>
 	<body>
 		<header>
