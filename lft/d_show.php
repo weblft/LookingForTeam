@@ -79,7 +79,7 @@
 									echo "<input type='hidden' name='id' value={$data['showid']}>";
 									echo "<input type='hidden' name='title' value={$data['title']}>";
 								?>
-								<input type="button" value="&#xf099;" name="tweet" class="fa">
+								<input type="button" name="tweet" class="fa">
 							</form>
 							</div>
 							<div class="requirement">
