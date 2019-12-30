@@ -1,13 +1,13 @@
 <?php
 require_once "function.php";
-$title=htmlspecialchars($_GET['search_title']);
-$wstart=htmlspecialchars($_GET['search_W_start_time']);
-$hstart=htmlspecialchars($_GET['search_H_start_time']);
-$age=htmlspecialchars($_GET['search_age']);
-$gati=htmlspecialchars($_GET['gati']);
+$title=convertToHtml($_GET['search_title']);
+$wstart=convertToHtml($_GET['search_W_start_time']);
+$hstart=convertToHtml($_GET['search_H_start_time']);
+$age=convertToHtml($_GET['search_age']);
+$gati=convertToHtml($_GET['gati']);
 //$id="";
 if($_GET['id']){
-	$id=htmlspecialchars($_GET['id']);
+	$id=convertToHtml($_GET['id']);
 }
 session_start();
 

@@ -2,7 +2,7 @@
 require_once "function.php";
 session_start();
 
-$passwd=htmlspecialchars($_POST['passwd']);
+$passwd=convertToHtml($_POST['passwd']);
 $tweetflag=false;//tweetをできるかどうかを判定するための変数
 $_SESSION['passflag']=true;//パスワードの入力があっているか判定するパスワードの入力があっているか判定するための変数。初めの入力のタイミングでエラ〜メッセージが出ないように最初はtrueにしておく。
 $message=$_SESSION['tweet_title'].'のチームメンバーの募集を開始しました！'."\n".'詳しくは下記のurlから'."\n".'#LookingForTeam'."\n#".$_SESSION['tweet_title']."\n";//twiiterに送るメッセージ

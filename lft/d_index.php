@@ -20,7 +20,7 @@
 		<div class="wrapper">
 			<div class="main_body">
 				<div class="main_title">
-					<img src="data:image/png;base64,<?php echo $img; ?>">
+					<img src="data:image/png;base64,<?php echo $img; ?>"><!--画像出力-->
 				</div>
 				<h1>チームを探すか登録するかを選んでください</h1>
 				<div class="main_select">

@@ -1,4 +1,5 @@
 <?php
+header('X-FRAME-OPTIONS: DENY');//クリックジャギング対策
 function makeNewPdo(){
 	$db = parse_url($_SERVER['CLEARDB_DATABASE_URL']);
 	$db['dbname'] = ltrim($db['path'], '/');
@@ -12,9 +13,6 @@ function makeNewPdo(){
 	 return new PDO($dsn,$user,$password,$options);
 }
 
-
-
-
 function makeRaandStr($length){
 	$str = array_merge(range('a', 'z'), range('0', '9'), range('A', 'Z"'));//array_mergedでrange()で生成したa~z,0~9,A~Zの配列をまとめた配列を作成する。。	
 	for ($i = 0; $i < $length; $i++) {
@@ -22,7 +20,10 @@ function makeRaandStr($length){
 	}	
 	return $r_str;	
 }
-
+function convertToHtml($str){//text/plain->text/htmlに変換
+	return htmlspecialchars($str,ENT_QUOTES,'UTF-8');
+	
+	}
 
 
 
