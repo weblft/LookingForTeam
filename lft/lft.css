@@ -208,6 +208,9 @@ footer{
 .tweet{
 	padding-top:250px;
 	text-align:center;
-	color:#8a2be2;		
+	color:#8a2be2;
 }
 
+.fab{
+	width:30px;
+}
