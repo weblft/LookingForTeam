@@ -9,8 +9,8 @@
 		<header>
 			<div class="container">
 				<div class="head_index">
-					<a href ="regist.php">登録</a><!--登録画面に飛ばす -->
-					<a href="search.php">検索</a><!--検索画面に飛ばす -->
+					<a href ="regist">登録</a><!--登録画面に飛ばす -->
+					<a href="search">検索</a><!--検索画面に飛ばす -->
 				</div>				
 				<div class="head_name">
 					LFT
@@ -26,7 +26,7 @@
 				<div class="main_select">
 					<div class="upper_select">	
 						<div class="box">
-							<a href="search.php">
+							<a href="search">
 								<!--<img src ="upper_select.png">-->
 								<p>チームを</p>
 								<p>検索したい人は</p>
@@ -36,7 +36,7 @@
 					</div>
 					<div class="lower_select">
 						<div class="box">
-							<a href="regist.php">
+							<a href="regist">
 								<p>チームを</p>
 								<p>登録したい人は</p>
 								<p>こちら</p>
