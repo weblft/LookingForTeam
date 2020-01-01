@@ -9,8 +9,8 @@
 		<header>
 			<div class="container">
 				<div class="head_index">
-					<a href ="index.php">TOP</a><!--TOP画面に飛ばす -->
-					<a href ="regist.php">登録</a><!--登録画面に飛ばす -->
+					<a href ="index">TOP</a><!--TOP画面に飛ばす -->
+					<a href ="regist">登録</a><!--登録画面に飛ばす -->
 				</div>	
 				<div class="head_name">
 					LFT
@@ -20,7 +20,7 @@
 		<div class="wrapper">
 			<div class="tweet">
 				<?php if($tweetflag==false): ?>
-					<form action="tweet.php" method="post">
+					<form action="tweet" method="post">
 						<h1>この投稿をツイートするためにパスを入力してください</h1>
 						<?php
 						if($_SESSION['passflag']==false){

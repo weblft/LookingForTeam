@@ -9,8 +9,8 @@
 		<header>
 			<div class="container">
 				<div class="head_index">
-					<a href ="index.php">TOP</a><!--TOP画面に飛ばす -->
-					<a href ="regist.php">登録</a><!--登録画面に飛ばす -->
+					<a href ="index">TOP</a><!--TOP画面に飛ばす -->
+					<a href ="regist">登録</a><!--登録画面に飛ばす -->
 				</div>
 				<div class="head_name">
 					LFT
@@ -27,7 +27,7 @@
 				</div>
 				<div class="search_condition">
 					<p>検索条件</p>
-					<form action="show.php" method="get">
+					<form action="show" method="get">
 						Game title:
 						<select name="search_title">
 							<option value="anything_title"checked>なんでも</option>

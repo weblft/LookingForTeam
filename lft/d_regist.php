@@ -9,8 +9,8 @@
 		<header>
 			<div class="container">
 				<div class="head_index">
-					<a href ="index.php">TOP</a><!--TOP画面に飛ばす -->
-					<a href="search.php">検索</a><!--検索画面に飛ばす -->
+					<a href ="index">TOP</a><!--TOP画面に飛ばす -->
+					<a href="search">検索</a><!--検索画面に飛ばす -->
 				</div>	
 				<div class="head_name">
 					LFT
@@ -24,7 +24,7 @@
 					<h2>登録のための条件を入力してください</h2>
 				</div>
 				<div class="regist_condition">
-					<form action="regist.php" method="post">
+					<form action="regist" method="post">
 						Game title:
 						<select name="regist_title">
 							<option value="League_of_Legends">League of Legends</option><!--あとで追加する--> 

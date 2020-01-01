@@ -10,8 +10,8 @@
 		<header>
 			<div class="container">
 				<div class="head_index">
-					<a href ="index.php">TOP</a><!--TOP画面に飛ばす -->
-					<a href ="regist.php">登録</a><!--登録画面に飛ばす -->
+					<a href ="index">TOP</a><!--TOP画面に飛ばす -->
+					<a href ="regist">登録</a><!--登録画面に飛ばす -->
 				</div>				
 				<div class="head_name">
 					LFT
@@ -68,7 +68,7 @@
 								<?php echo "平日の活動時間:".$data['W_start']."時〜".$data['W_end']."時<br>"; ?>
 								<?php echo "休日の活動時間:".$data['H_start']."時〜".$data['H_end']."時<br>"; ?>
 								<?php echo "ガチ度:".$data['gati'];?>
-								<form action="delete.php" method="get">
+								<form action="delete" method="get">
 								<?php
 									echo "<input type='hidden' name='id' value={$data['showid']}>"; 
 								?>
@@ -76,7 +76,7 @@
 										<i class="fa fa-trash"></i>
 									</button>
 								</form>
-							<form action="tweet.php" method="get">
+							<form action="tweet" method="get">
 								<?php
 									echo "<input type='hidden' name='id' value={$data['showid']}>";
 									echo "<input type='hidden' name='title' value={$data['title']}>";

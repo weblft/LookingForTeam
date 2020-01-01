@@ -15,7 +15,7 @@
 		<?php else:?>
 			<h1> 削除完了です！</h1>
 		<?php endif ?>
-		<form action="index.php" method="post">
+		<form action="index" method="post">
 			<input type="submit" value="topへ"> 
 		</form>
 		<br>
