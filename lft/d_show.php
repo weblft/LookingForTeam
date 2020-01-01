@@ -72,14 +72,16 @@
 								<?php
 									echo "<input type='hidden' name='id' value={$data['showid']}>"; 
 								?>
-									<input type="submit" value="削除へ">
+									<button type='submit' name='delete' class='delete_btn'>
+										<i class="fa fa-trash"></i>
+									</button>
 								</form>
 							<form action="tweet.php" method="get">
 								<?php
 									echo "<input type='hidden' name='id' value={$data['showid']}>";
 									echo "<input type='hidden' name='title' value={$data['title']}>";
 								?>
-								<button type="submit">
+								<button type="submit" name="tweet" class='tweet_btn'>
 									<i class="fab fa-twitter"></i> 
 								</button>
 							</form>

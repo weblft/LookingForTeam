@@ -210,10 +210,10 @@
 		text-align:center;
 		color:#8a2be2;
 	}
-	button{
+	.tweet_btn{
 		background-color:#00ACEE;
 	}	
-	button i{
+	.tweet_btn i{
 		color:white;	
 			
 	}
