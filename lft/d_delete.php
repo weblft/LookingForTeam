@@ -20,7 +20,7 @@
 		<div class="wrapper">
 			<div class="delete">
 				<form action="delete.php" method="post">
-					<h1>あなたのパスを入力してください</h1>
+					<h1>この投稿を削除するためにパスを入力してください</h1>
 					<?php
 					if($_SESSION['passflag']==false){
 						echo "<h2>パスが違います</h2>";
