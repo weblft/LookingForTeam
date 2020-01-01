@@ -11,7 +11,7 @@ $_SESSION['id_judge']=true;
 
 try{
 	 $result = $s3->getObject($params);
-	$img=base64_encode($result['Body']);//うまく動かないので後で直す
+	$img=base64_encode($result['Body']);
 	
 }
 catch(S3Exception $e){

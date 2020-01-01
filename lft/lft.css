@@ -210,12 +210,3 @@ footer{
 	text-align:center;
 	color:#8a2be2;
 }
-
-	.fa:after{
-    display:block;
-    content:"\f099";
-    width:20px;
-    height:20px;
-    font-family: "Font Awesome 5 Free";
-    font-weight:900;
-}
