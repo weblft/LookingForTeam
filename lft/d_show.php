@@ -69,26 +69,26 @@
 											echo "募集対象年齢:60才以上";
 										}
 									?>
-								<br>
-								<?php echo "平日の活動時間:".$data['W_start']."時〜".$data['W_end']."時<br>"; ?>
-								<?php echo "休日の活動時間:".$data['H_start']."時〜".$data['H_end']."時<br>"; ?>
-								<?php echo "ガチ度:".$data['gati'];?>
-								<form action="delete" method="get">
-									<?php
-										echo "<input type='hidden' name='id' value={$data['showid']}>"; 
-									?>
-									<button type='submit' name='delete' class='delete_btn'>
-										<i class="fa fa-trash"></i>
-									</button>
-								</form>
-								<form action="tweet" method="get">
-									<?php
-										echo "<input type='hidden' name='id' value={$data['showid']}>";
-										echo "<input type='hidden' name='title' value={$data['title']}>";
-									?>
-									<button type="submit" name="tweet" class='tweet_btn'>
-										<i class="fab fa-twitter"></i> 
-									</button>
+									<br>
+									<?php echo "平日の活動時間:".$data['W_start']."時〜".$data['W_end']."時<br>"; ?>
+									<?php echo "休日の活動時間:".$data['H_start']."時〜".$data['H_end']."時<br>"; ?>
+									<?php echo "ガチ度:".$data['gati'];?>
+									<form action="delete" method="get">
+										<?php
+											echo "<input type='hidden' name='id' value={$data['showid']}>"; 
+										?>
+										<button type='submit' name='delete' class='delete_btn'>
+											<i class="fa fa-trash"></i>
+										</button>
+									</form>
+									<form action="tweet" method="get">
+										<?php
+											echo "<input type='hidden' name='id' value={$data['showid']}>";
+											echo "<input type='hidden' name='title' value={$data['title']}>";
+										?>
+										<button type="submit" name="tweet" class='tweet_btn'>
+											<i class="fab fa-twitter"></i> 
+										</button>
 									</form>
 								</div>
 							</div>
