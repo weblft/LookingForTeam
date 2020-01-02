@@ -160,7 +160,6 @@
 		padding-bottom:20px;
 		text-align:center;
 		font-size:20px;
-		border-bottom:solid 1px gray;
 		
 	}
 	.show_contents{
@@ -174,19 +173,18 @@
 		background-color:#4d806b;
 		color:white;
 		width:100%;
-		/*	padding-left:32px;*/
 	}
 	.show_id .id_text{
 		padding-left:30px;	
 	}
 	.show_content{
-		border-bottom:solid 1px #4d806b;
-		padding-top:20px;
-		padding-bottom:10px;
+		padding-bottom:10px;		
+		margin-bottom:2px;
 		width:100%;
 		display:inline-block;
-		background-color:#C8E6C9;
-		padding-left:30px;
+		background-color: #C8E6C9;	
+		text-align:left;
+		border:solid 1px #4d806b;
 	}
 	.show_content .show_left{
 		float:left;
