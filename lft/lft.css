@@ -160,24 +160,13 @@
 		padding-bottom:20px;
 		text-align:center;
 		font-size:20px;
-		/*border-bottom:solid 1px gray;*/
-	
-	}
-	
-.show_contents{
-		width:100%;
-		width:85%;
-		margin:auto;
-	}
-	.show_content{
-		padding-bottom:10px;		
-		margin-bottom:2px;
-		width:100%;
-		display:inline-block;
-		background-color: #C8E6C9;	
-		text-align:left;
-		border:solid 1px #4d806b;
+		border-bottom:solid 1px gray;
 		
+	}
+	.show_contents{
+		width:100%;
+		}
+	
 	.show_id{
 		background-color:#4d806b;
 		color:white;
@@ -187,21 +176,27 @@
 	.show_id .id_text{
 		padding-left:30px;	
 	}
-	.show_main{
+	.show_content{
+		border-bottom:solid 1px gray;
 		padding-top:20px;
-	}
-
-	.show_content .show_left{
-	float:left;
-	width:50%;
-	}
-	.show_left .left_text{
+		padding-bottom:10px;
+		width:100%;
+		display:inline-block;
+		background-color:#D7EEFF;
 		padding-left:30px;
+	}
+	.show_content .show_left{
+		float:left;
+		width:50%;	
+	}
+	.show_left .left_text{	
+		padding-left:30px;	
 	}
 	.show_content .show_right{
 		float:right;
 		width:50%;
-}
+	}
+	
 	.delete{
 		padding-top:250px;
 		text-align:center;
