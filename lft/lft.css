@@ -166,11 +166,15 @@
 	.show_contents{
 		width:100%;
 		}
+	
 	.show_id{
-		background-color:#3399FF;
+		background-color:#4d806b;
 		color:white;
 		width:100%;
-		padding-left:30px;
+		/*	padding-left:32px;*/
+	}
+	.show_id .id_text{
+		padding-left:30px;	
 	}
 	.show_content{
 		border-bottom:solid 1px gray;
@@ -181,13 +185,14 @@
 		background-color:#D7EEFF;
 		padding-left:30px;
 	}
-	.show_content .detail{
+	.show_content .show_left{
 		float:left;
-		width:50%;
-		
-		
+		width:50%;	
 	}
-	.show_content .requirement{
+	.show_left .left_text{	
+		padding-left:30px;	
+	}
+	.show_content .show_right{
 		float:right;
 		width:50%;
 	}
