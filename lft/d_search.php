@@ -27,7 +27,7 @@
 				</div>
 				<div class="search_condition">
 					<p>検索条件</p>
-					<form action="show" method="get">
+					<form action="show" method="get" class='search_btn'>
 						Game title:
 						<select name="search_title">
 							<option value="anything_title"checked>なんでも</option>
