@@ -14,7 +14,6 @@ $check=0;//削除用チェック
 $shownum=(string)uniqid(rand(1000,9999));//idを作成。重複しないように
 $hash_pass = password_hash($pass, PASSWORD_DEFAULT);//パスをハッシュ化
 date_default_timezone_set("Asia/Tokyo");//UTC->Asia/Tokyoへ
-
 $date=date("Y/m/d H:i:s");//日時
 
 

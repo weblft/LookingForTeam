@@ -3,9 +3,31 @@ require_once "function.php";
 session_start();
 
 $passwd=convertToHtml($_POST['passwd']);
+
+
+if($_SESSION['tweet_gati']==1){
+	$gatiMessage= "ガチ度１(楽しくやろう)";
+}
+elseif($_SESSION['tweet_gati']==2){
+	$gatiMessage="ガチ度2(強くなりたい)";
+}
+elseif($_SESSION['tweet_gati']==2){
+	$gatiMessage="ガチ度3(スクリムよくやる)";
+}
+elseif($_SESSION['tweet_gati']==2){
+	$gatiMessage="ガチ度4(積極的に大会出場)";
+}	
+elseif($_SESSION['tweet_gati']==2){
+	$gatiMessage="ガチ度5(プロを目指す)";
+}
+
+
+
+
+
 $tweetflag=false;//tweetをできるかどうかを判定するための変数
 $_SESSION['passflag']=true;//パスワードの入力があっているか判定するパスワードの入力があっているか判定するための変数。初めの入力のタイミングでエラ〜メッセージが出ないように最初はtrueにしておく。
-$message=$_SESSION['tweet_title'].'のチームメンバーの募集を開始しました！'."\n".'詳しくは下記のurlから'."\n".'#LookingForTeam'."\n#".$_SESSION['tweet_title']."\n";//twiiterに送るメッセージ
+$message=$_SESSION['tweet_title'].'のチームメンバーの募集を'.$gatiMessage.'で開始しました！'."\n".'詳しくは下記のurlから'."\n".'#LookingForTeam'."\n#".$_SESSION['tweet_title']."\n";//twiiterに送るメッセージ
 $encodeMessage=urlencode($message);//エンコードしたメッセージ
 $url="https://weblft.herokuapp.com/show.php?search_title={$_SESSION['tweet_title']}&id={$_SESSION['confirm_id']}";
 $encodeUrl=urlencode($url);//エンコードしたurl

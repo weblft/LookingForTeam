@@ -6,6 +6,7 @@ $hstart=convertToHtml($_GET['search_H_start_time']);
 $age=convertToHtml($_GET['search_age']);
 $gati=convertToHtml($_GET['gati']);
 //$id="";
+i=0;
 if($_GET['id']){
 	$id=convertToHtml($_GET['id']);
 }
