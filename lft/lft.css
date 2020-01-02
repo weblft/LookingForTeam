@@ -164,9 +164,12 @@
 		
 	}
 	.show_contents{
-		width:100%;
+		width:85%;
+		margin:auto;
 		}
-	
+	.show_main{
+		padding-top:20px;
+	}
 	.show_id{
 		background-color:#4d806b;
 		color:white;
@@ -177,12 +180,12 @@
 		padding-left:30px;	
 	}
 	.show_content{
-		border-bottom:solid 1px gray;
+		border-bottom:solid 1px #4d806b;
 		padding-top:20px;
 		padding-bottom:10px;
 		width:100%;
 		display:inline-block;
-		background-color:#D7EEFF;
+		background-color:#C8E6C9;
 		padding-left:30px;
 	}
 	.show_content .show_left{
