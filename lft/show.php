@@ -1,5 +1,6 @@
 <?php
 require_once "function.php";
+require_once 'PhotosContoroller.php';
 $title=convertToHtml($_GET['search_title']);
 $wstart=convertToHtml($_GET['search_W_start_time']);
 $hstart=convertToHtml($_GET['search_H_start_time']);

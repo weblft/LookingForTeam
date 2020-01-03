@@ -1,5 +1,6 @@
 <?php
 require_once "function.php";
+require_once 'PhotosContoroller.php';
 $title=convertToHtml($_POST['regist_title']);//登録するタイトル
 $content=nl2br(convertToHtml($_POST['regist_text']),false);//募集要項の内容
 $age=intval(convertToHtml($_POST['regist_age']));//年齢

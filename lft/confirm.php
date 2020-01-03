@@ -1,5 +1,7 @@
 <?php
 require_once "function.php";
+require_once 'PhotosContoroller.php';
+
 session_start();
 $_SESSION['registed']=true;
 $title=$_SESSION['regist_title'];//変更
