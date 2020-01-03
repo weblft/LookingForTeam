@@ -3,7 +3,7 @@ header(‘Content-Type:text/css; charset=utf-8’);
 ?>
 	html , body{
 		<?php session_start(); 
-			background-image:url($_SESSION['$backgraound']);
+			background-image:url($_SESSION['$background']);
 		?>
 		background-size:cover;
 		background-attachment: fixed;
