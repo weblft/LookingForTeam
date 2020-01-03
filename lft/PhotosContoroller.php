@@ -31,5 +31,5 @@ $params2=[
 'Bucket' => $bucket_name,
 'Key' => 'background.png',
 ];
-$url = $s3Client->getObjectUrl($bucket_name, 'background.png');
+$url = $S3Client->getObjectUrl($bucket_name, 'background.png');
 ?>
