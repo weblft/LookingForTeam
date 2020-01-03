@@ -16,7 +16,7 @@ try{
 	$uri = $request -> getUri();
 	$img=base64_encode($result['Body']);
 	$url = $uri -> getScheme().'://'.$uri -> getHost().$uri -> getPath().'?'.$uri -> getQuery();
-	var_dump($url);
+echo $url;
 }
 catch(S3Exception $e){
 	var_dump($e -> getMessage());
