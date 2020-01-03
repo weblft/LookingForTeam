@@ -18,6 +18,6 @@ catch(S3Exception $e){
 	var_dump($e -> getMessage());
 } 
 
-//require 'd_index.php';
+require 'd_index.php';
 
 ?>
