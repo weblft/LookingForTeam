@@ -33,7 +33,7 @@ $params2=[
 ];
 $cmd = $s3 -> getCommand('GetObject', $params2);
 $request = $s3->createPresignedRequest($cmd, '+1 minutes');
-$backgraoundUri = $request -> getUri();
+$backgroundUri = $request -> getUri();
 
-$backgraoundUrl = $backgraoundUri-> getScheme().'://'.$backgraoundUri -> getHost().$uri -> getPath().'?'.$backgraoundUri -> getQuery();
+$backgroundUrl = $backgroundUri-> getScheme().'://'.$backgroundUri -> getHost().$uri -> getPath().'?'.$backgroundUri -> getQuery();
 ?>

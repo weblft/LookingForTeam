@@ -12,7 +12,7 @@ $_SESSION['id_judge']=true;
 try{
 	$result = $s3->getObject($params);
 	$img=base64_encode($result['Body']);
-	echo $backgraoundUrl;
+	echo $backgroundUrl;
 }
 catch(S3Exception $e){
 	var_dump($e -> getMessage());
