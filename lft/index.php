@@ -11,6 +11,7 @@ $_SESSION['id_judge']=true;
 
 try{
 	 $result = $s3->getObject($params);
+	echo $result;
 	$img=base64_encode($result['Body']);
 	
 }
@@ -18,6 +19,6 @@ catch(S3Exception $e){
 	var_dump($e -> getMessage());
 } 
 
-require 'd_index.php';
+//require 'd_index.php';
 
 ?>

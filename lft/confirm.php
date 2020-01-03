@@ -24,7 +24,7 @@ elseif($gati==2){
 $message=$title.'のチームメンバーの募集を'.$gatiMessage.'で開始しました！'."\n".'詳しくは下記のurlから'."\n".'#LookingForTeam'."\n#".$title."\n";
 //$message=$title.'のチームメンバーの募集を開始しました！'."\n".'詳しくはこちら'."\n".'localhost/php/lft/show.php?search_title='.$title.'&id='.$id."\n".'#LookingForTeam'."\n#".$title;
 $encodeMessage=urlencode($message);
-$url="https://weblft.herokuapp.com/show.php?search_title={$title}&id={$id}";
+$url="https://weblft.herokuapp.com/show?search_title={$title}&id={$id}";
 $encodeUrl=urlencode($url);
 require "d_confirm.php";
 

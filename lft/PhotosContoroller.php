@@ -27,5 +27,8 @@ $params = [
 'Key' => 'logo.png',
 ];
 
-
+$params2=[
+'Bucket' => $bucket_name,
+'Key' => 'background.png',
+];
 ?>
