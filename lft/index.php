@@ -10,8 +10,8 @@ $_SESSION['id_judge']=true;
 
 
 try{
-	 $result = $s3->getObject($params);
-	echo (string)$result->getUri();
+	$result = $s3->getObject($params);
+	echo $url;
 	$img=base64_encode($result['Body']);
 	
 }
