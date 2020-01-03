@@ -12,6 +12,10 @@ $_SESSION['id_judge']=true;
 try{
 	$result = $s3->getObject($params);
 	$img=base64_encode($result['Body']);
+	$cmd = $s3 -> getCommand('GetObject', $params2);
+	$request = $s3->createPresignedRequest($cmd, '+1 minutes');
+	$backgroundUri = $request -> getUri();
+	$backgroundUrl = $backgroundUri-> getScheme().'://'.$backgroundUri -> getHost().$uri -> getPath().'?'.$backgroundUri -> getQuery();
 	echo $backgroundUrl;
 }
 catch(S3Exception $e){

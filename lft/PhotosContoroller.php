@@ -31,9 +31,5 @@ $params2=[
 'Bucket' => $bucket_name,
 'Key' => 'background.png',
 ];
-$cmd = $s3 -> getCommand('GetObject', $params2);
-$request = $s3->createPresignedRequest($cmd, '+1 minutes');
-$backgroundUri = $request -> getUri();
 
-$backgroundUrl = $backgroundUri-> getScheme().'://'.$backgroundUri -> getHost().$uri -> getPath().'?'.$backgroundUri -> getQuery();
 ?>
