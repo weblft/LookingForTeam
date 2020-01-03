@@ -86,6 +86,7 @@
 										<?php
 											echo "<input type='hidden' name='id' value={$data['showid']}>";
 											echo "<input type='hidden' name='title' value={$data['title']}>";
+											echo "<input type='hidden' name='gati' value={$data['gati']}>";
 										?>
 										<button type="submit" name="tweet" class='tweet_btn'>
 											<i class="fab fa-twitter"></i> 

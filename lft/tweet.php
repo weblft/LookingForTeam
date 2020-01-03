@@ -37,6 +37,7 @@ $encodeUrl=urlencode($url);//エンコードしたurl
 if(isset($_GET['id'])){
 	$_SESSION['confirm_id']=$_GET['id'];
 	$_SESSION['tweet_title']=$_GET['title'];
+	$_SESSION['tweet_gati']=$_GET['gati'];
 	unset($_GET['id']);
 }
 

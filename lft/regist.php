@@ -69,7 +69,7 @@ try{
 		$_SESSION['regist_pass']=$pass;//確認ようのパスをconfirm.phpに飛ばすためのセッション
 		$_SESSION['regist_title']=$title;//
 		$_SESSION['regist_id']=$shownum;//
-		
+		$_SESSION['regist_gati']=$gati;
 		header('Location:confirm.php');
 		exit();
 		
