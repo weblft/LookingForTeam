@@ -114,9 +114,7 @@
 		margin-bottom:15px;
 	}	
 	.search_btn select{
-		height:22px;
 		font-size:14px;
-		margin-bottom:20px;
 	}
 	.search_btn input{
 		font-size:14px;
@@ -144,6 +142,9 @@
 		resize:none;
 		width:300px;
 		height:200px;
+	}
+	.regist_condition form select, input{
+		font-size:14px;
 	}
 	.confirm{
 		text-align: center;
