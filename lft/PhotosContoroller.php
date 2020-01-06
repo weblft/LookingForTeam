@@ -5,8 +5,8 @@ use Aws\S3\S3Client;
 use Aws\CommandPool;
 
 $credentials = [
-'key' => 'AKIAINSE6J6RS55N6KXQ',//upするときは削除
-'secret' => 'lSb5VuF6Jf9YolaR+h3COxR0paiyrlB0s5ujTB2H',//upするときは削除
+'key' => '*******',//upするときは削除
+'secret' => '*******',//upするときは削除
 
 ];
 
