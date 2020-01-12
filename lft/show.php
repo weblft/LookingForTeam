@@ -23,7 +23,6 @@ if (isset($_SESSION['delete']) && $_SESSION['delete']==true){
 try{
 	$pdo = makeNewPdo();
 	$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); 
-
 	$st=$pdo->query("SELECT title FROM game");
 		while($games=$st->fetch()){
 			$gameTitles[]=$games['title'];

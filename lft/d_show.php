@@ -24,12 +24,12 @@
 			<div class="showBody">
 				<div class="showGameTitle">
 					<?php
-						if($_GET['searchTitle']=="anythingTitle"){
+						if($_GET['title']=="anythingTitle"){
 							echo "<h1>全てのゲームの募集<h1>";
 						}
 						else{
 							for($i=0;$i<count($gameTitles);$i++){
-								if($_GET['searchTitle']==$gameTitles[$i]){
+								if($_GET['title']==$gameTitles[$i]){
 									echo "<h1>{$gameTitles[$i]}</h1>";
 								}
 							}
