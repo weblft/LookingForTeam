@@ -9,33 +9,32 @@
 	<body>
 		<header>
 			<div class="container">
-				<div class="head_index">
+				<div class="headIndex">
 					<a href ="regist">登録</a><!--登録画面に飛ばす -->
 					<a href="search">検索</a><!--検索画面に飛ばす -->
 				</div>				
-				<div class="head_name">
+				<div class="headName">
 					LFT
 				</div>
 			</div>
 		</header>
 		<div class="wrapper">
-			<div class="main_body">
-				<div class="main_title">
+			<div class="mainBody">
+				<div class="mainTitle">
 					<img src="data:image/png;base64,<?php echo $img; ?>"><!--画像出力-->
 				</div>
 				<h1>チームを探すか登録するかを選んでください</h1>
-				<div class="main_select">
-					<div class="upper_select">	
+				<div class="mainSelect">
+					<div class="upperSelect">	
 						<div class="box">
 							<a href="search">
-								<!--<img src ="upper_select.png">-->
 								<p>チームを</p>
 								<p>検索したい人は</p>
 								<p>こちら</p>
 							</a>
 						</div>
 					</div>
-					<div class="lower_select">
+					<div class="lowerSelect">
 						<div class="box">
 							<a href="regist">
 								<p>チームを</p>
@@ -47,7 +46,7 @@
 				</div>
 			</div>
 			<footer>
-				<div class="footer_title">
+				<div class="footerTitle">
 					<p>Looking For Team</p>
 				</div>
 			</footer>

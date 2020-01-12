@@ -9,11 +9,11 @@
 	<body>
 		<header>
 			<div class="container">
-				<div class="head_index">
+				<div class="headIndex">
 					<a href ="index">TOP</a><!--TOP画面に飛ばす -->
 					<a href ="regist">登録</a><!--登録画面に飛ばす -->
 				</div>	
-				<div class="head_name">
+				<div class="headName">
 					LFT
 				</div>
 			</div>
@@ -23,9 +23,9 @@
 				<form action="delete" method="post">
 					<h1>この投稿を削除するためにパスを入力してください</h1>
 					<?php
-					if($_SESSION['passflag']==false){
+					if($_SESSION['passFlag']==false){
 						echo "<h2>パスが違います</h2>";
-						$_SESSION['passflag']=true;
+						$_SESSION['passFlag']=true;
 						}
 					?>
 					<input type="text" name="passwd">
@@ -33,7 +33,7 @@
 				</form>
 			</div>
 			<footer>
-				<div class="footer_title">
+				<div class="footerTitle">
 					<p>Looking For Team</p>
 				</div>
 			</footer>

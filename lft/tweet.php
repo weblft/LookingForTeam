@@ -3,22 +3,22 @@ require_once "function.php";
 require_once 'PhotosContoroller.php';
 session_start();
 
-$passwd=convertToHtml($_POST['passwd']);
+$passwd=toHtml($_POST['passwd']);
 
 
-if($_SESSION['tweet_gati']==1){
+if($_SESSION['tweetGati']==1){
 	$gatiMessage= "ガチ度１(楽しくやろう)";
 }
-elseif($_SESSION['tweet_gati']==2){
+elseif($_SESSION['tweetGati']==2){
 	$gatiMessage="ガチ度2(強くなりたい)";
 }
-elseif($_SESSION['tweet_gati']==2){
+elseif($_SESSION['tweetGati']==2){
 	$gatiMessage="ガチ度3(スクリムよくやる)";
 }
-elseif($_SESSION['tweet_gati']==2){
+elseif($_SESSION['tweetGati']==2){
 	$gatiMessage="ガチ度4(積極的に大会出場)";
 }	
-elseif($_SESSION['tweet_gati']==2){
+elseif($_SESSION['tweetGati']==2){
 	$gatiMessage="ガチ度5(プロを目指す)";
 }
 
@@ -26,18 +26,18 @@ elseif($_SESSION['tweet_gati']==2){
 
 
 
-$tweetflag=false;//tweetをできるかどうかを判定するための変数
-$_SESSION['passflag']=true;//パスワードの入力があっているか判定するパスワードの入力があっているか判定するための変数。初めの入力のタイミングでエラ〜メッセージが出ないように最初はtrueにしておく。
-$message=$_SESSION['tweet_title'].'のチームメンバーの募集を'.$gatiMessage.'で開始しました！'."\n".'詳しくは下記のurlから'."\n".'#LookingForTeam'."\n#".$_SESSION['tweet_title']."\n";//twiiterに送るメッセージ
+$tweetFlag=false;//tweetをできるかどうかを判定するための変数
+$_SESSION['passFlag']=true;//パスワードの入力があっているか判定するパスワードの入力があっているか判定するための変数。初めの入力のタイミングでエラ〜メッセージが出ないように最初はtrueにしておく。
+$message=$_SESSION['tweetTitle'].'のチームメンバーの募集を'.$gatiMessage.'で開始しました！'."\n".'詳しくは下記のurlから'."\n".'#LookingForTeam'."\n#".$_SESSION['tweetTitle']."\n";//twiiterに送るメッセージ
 $encodeMessage=urlencode($message);//エンコードしたメッセージ
-$url="https://weblft.herokuapp.com/show.php?search_title={$_SESSION['tweet_title']}&id={$_SESSION['confirm_id']}";
+$url="https://weblft.herokuapp.com/show?searchTitle={$_SESSION['tweetTitle']}&id={$_SESSION['confirmId']}";
 $encodeUrl=urlencode($url);//エンコードしたurl
 
 //はじめに受け取ったidとタイトルを保管しておく
 if(isset($_GET['id'])){
-	$_SESSION['confirm_id']=$_GET['id'];
-	$_SESSION['tweet_title']=$_GET['title'];
-	$_SESSION['tweet_gati']=$_GET['gati'];
+	$_SESSION['confirmId']=$_GET['id'];
+	$_SESSION['tweetTitle']=$_GET['title'];
+	$_SESSION['tweetGati']=$_GET['gati'];
 	unset($_GET['id']);
 }
 
@@ -51,15 +51,15 @@ try{
 	$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); 
 	if($_POST['tweet']&&isset($passwd)){
 		$st=$pdo->prepare("SELECT pass FROM registration WHERE showid=?");
-		$st->bindValue(1,$_SESSION['confirm_id'],PDO::PARAM_STR);
+		$st->bindValue(1,$_SESSION['confirmId'],PDO::PARAM_STR);
 		$st->execute();
 		$pass=$st->fetch();
 		if(password_verify($passwd,$pass['pass'])){
-			$_SESSION['passflag']=true;
+			$_SESSION['passFlag']=true;
 			$tweetflag=true;
 		}
 		else{
-			$_SESSION['passflag']=false;
+			$_SESSION['passFlag']=false;
 		}
 	}
 }catch(PDOException $e){

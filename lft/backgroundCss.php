@@ -7,5 +7,4 @@ session_start();
 		background-size:cover;
 		background-attachment: fixed;
 		background-position: center center;<!--常に画像の中心を基準にして見えるように配置-->
-	
 	}

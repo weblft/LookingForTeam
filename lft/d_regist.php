@@ -9,33 +9,33 @@
 	<body>
 		<header>
 			<div class="container">
-				<div class="head_index">
+				<div class="headIndex">
 					<a href ="index">TOP</a><!--TOP画面に飛ばす -->
 					<a href="search">検索</a><!--検索画面に飛ばす -->
 				</div>	
-				<div class="head_name">
+				<div class="headName">
 					LFT
 				</div>
 			</div>
 		</header>
 		<div class="wrapper">
-			<div class="regist_body">
-				<div class="regist_title">
+			<div class="registBody">
+				<div class="registTitle">
 					<h1>チーム登録</h1>
 					<h2>登録のための条件を入力してください</h2>
 				</div>
-				<div class="regist_condition">
+				<div class="registCondition">
 					<form action="regist" method="post">
 						Game title:
-						<select name="regist_title">
-							<option value="League_of_Legends">League of Legends</option><!--あとで追加する--> 
+						<select name="registTitle">
+							<option value="League_of_Legends">League of Legends</option><!--随時追加する--> 
 						</select>
 						<br>
 						募集要項:<br>
-						<textarea  cols="30" rows="10" name="regist_text" placeholder="＊必ずやりとりができる連絡先は記述してください。" required></textarea>
+						<textarea  cols="30" rows="10" name="registText" placeholder="＊必ずやりとりができる連絡先は記述してください。" required></textarea>
 						<br>
 						募集対象年代: 
-						<select name="regist_age">
+						<select name="registAge">
 							<?php
 							for($i=10;$i<=60;$i+=10){
 								if($i<=50){
@@ -49,16 +49,16 @@
 						</select>
 						<br>
 						ゲームのアカウント名: 
-						<input type="text" name="game_id" required>
+						<input type="text" name="gameId" required>
 						<br>
 						<?php
 							session_start();
-							if($_SESSION['w_error']==false){
+							if($_SESSION['weekdayError']==false){
 							echo '<p>⚠︎平日の活動時刻より平日の終了時刻を遅くしてください。</p>';
 							}
 						?>
 						平日の活動時刻:	
-						<select name="regist_W_start_time">
+						<select name="weekdayStart">
 							<?php
 								for($i=7;$i<=30;$i++){//30時間制での表記。７時を最も小さい値とする６時は7時から見て次の６時となる。６時からゲームを始めるなどは指定できない
 									if($i<=23){
@@ -73,7 +73,7 @@
 						</select>
 						<br>
 						平日の終了時刻: 
-						<select name="regist_W_end_time">
+						<select name="weekdayStop">
 							<?php
 								for($i=7;$i<=30;$i++){
 									if($i<=23){
@@ -90,12 +90,12 @@
 						
 						<?php
 							session_start();
-							if($_SESSION['h_error']==false){
+							if($_SESSION['holidayError']==false){
 							echo '<p>⚠︎休日の活動時刻より休日の終了時刻を遅くしてください。</p>';
 							}
 						?>
 						休日の活動時刻: 
-						<select name="regist_H_start_time">
+						<select name="holidayStart">
 							<?php
 								for($i=7;$i<=30;$i++){
 									if($i<=23){
@@ -110,7 +110,7 @@
 						</select>
 						<br>
 						休日の終了時刻: 
-						<select name="regist_H_end_time">
+						<select name="holidayStop">
 							<?php
 								for($i=7;$i<=30;$i++){
 									if($i<=23){
@@ -125,7 +125,7 @@
 						</select>
 						<br>
 						ガチ度:
-						<select name="regist_gati">
+						<select name="registGati">
 							<?php
 							for($i=1;$i<=5;$i++){
 								if($i==1){
@@ -148,15 +148,15 @@
 						</select>
 						<br>
 						<?php  
-							$Dpass=makeRaandStr(6);/*Delete用パスを６桁のパスで生成*/ 
-							echo "<input type='hidden' name='pass' value={$Dpass}>";
+							$userPass=makeRaandStr(6);/*ユーザー用パスを６桁のパスで生成*/ 
+							echo "<input type='hidden' name='pass' value={$userPass}>";
 						?>
 						<input type="submit" name="submit" value="登録" onClick='return confirm("この内容で本当によろしいですか？");'>
 					</form>
 				</div>
 			</div>
 			<footer>
-				<div class="footer_title">
+				<div class="footerTitle">
 					<p>Looking For Team</p>
 				</div>
 			</footer>

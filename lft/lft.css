@@ -1,12 +1,10 @@
+	/*共通の処理*/
 	html , body{
-		/*background-color:#F5F5F5;*/
 		background-color:#ededed;
 		padding:0; 
 		margin:0; 
 		height: 100%;
-		
 	}
-	
 	header {	
 		background-color:gray;
 		height:65px;
@@ -19,52 +17,72 @@
 		width: 1170px;
 		margin: 0 auto;
 	}
-	header .head_index{
+	header .headIndex{
 		float:left;
 		width:124px;
 		padding:20px 20px;
 		display:box;
 	}
-	.head _index a{
+	.headIndex a{
 		line-height: 65px;
 		padding: 0 25px;
 		display: block;	
 	}
 	
-	header .head_name{
+	header .headName{
 		float:right;
 		padding:20px 25px;
 		color:white;
 	}
-	.main_body{
+	footer{
+		background-color:gray;
+		width:100%;
+		height:65px;
+		margin-top: auto;
+	}
+	.footerTitle {
+		font-size:18px;	
+		float:right;
+		padding-right:10px;
+		color:white;
+	}
+	.wrapper{
+		display: flex;
+		flex-direction: column;
+		min-height: 100vh;
+	}
+
+	/*indexの処理*/
+	.mainBody{
 		color:#8a2be2;
 		padding-top:90px;
 		padding-bottom:50px;
 		text-align:center;
 		margin:0 20px;
 	}
-	.main_body h1{
+	.mainBody h1{
 		padding-bottom:30px;
 	}
-	.main_title{
+	.mainTitle{
 		padding-bottom:40px;
 		padding-top:60px;
 		
 	}
-	.main_title img{
+	.mainTitle img{
 		width:100%;
 		max-width:640px;
 		height:auto;
 		max-height:480px
 	
 	}
-	.upper_select {
+	.upperSelect {
 		text-align:center;
 		padding-bottom:20px;
 	}
-	.lower_select{
+	.lowerSelect{
 		text-align:center;
 	}
+	
 	.box{
 		width:40%;
 		margin:0 auto;	
@@ -94,91 +112,96 @@
 		display:block;	
 		text-decoration: none;
 	}
-	.search_body{
+	
+	/*searchの処理*/
+	.searchBody{
 		color:#8a2be2;
 		padding-top:90px;
 		padding-bottom:65px;
 		text-align:center;
 	}
-	.search_title{
+	.searchTitle{
 		margin-top:80px;
 	}
-	.search_condition p{
+	.searchCondition p{
 		font-size:21px;
 	}
 	
-	.search_condition form{
+	.searchCondition form{
 		font-size:20px;
 	}
-	.search_condition select{
+	.searchCondition select{
 		margin-bottom:15px;
 	}	
-	.search_btn select{
+	.searchBtn select{
 		font-size:14px;
 	}
-	.search_btn input{
+	.searchBtn input{
 		font-size:14px;
 	}
 
-	
-	.regist_title{
+	/*registの処理*/
+	.registTitle{
 		padding-top:75px;
 		padding-bottom:40px;
 		text-align:center;
 		font-size:20px;
 	}
-	.regist_body{
+	.registBody{
 		color:#8a2be2;
 		padding-bottom:65px;
 	}
-	.regist_body .regist_condition{
+	.registBody .registCondition{
 		margin-bottom:30px;
 	}
-	.regist_condition form{
+	.registCondition form{
 		font-size:23px;
 		text-align: center;
 	}
-	.regist_condition form textarea{
+	.registCondition form textarea{
 		resize:none;
 		width:300px;
 		height:200px;
 	}
-	.regist_condition form select, input{
+	.registCondition form select, input{
 		font-size:14px;
 	}
+	
+	/*confirmの処理*/
 	.confirm{
 		text-align: center;
 		color:#8a2be2;
 		padding-top:25%;
-		
 	}
-	.show_body{
+	
+	/*showの処理*/
+	.showBody{
 		color:#8a2be2;
 		padding-bottom:65px;
 	}
-	.show_body .show_game_title{
+	.showBody .showGameTitle{
 		padding-top:75px;
 		padding-bottom:20px;
 		text-align:center;
 		font-size:20px;
 		
 	}
-	.show_contents{
+	.showContents{
 		width:85%;
 		margin:auto;
 		}
-	.show_main{
+	.showMain{
 		padding-top:20px;
 	}
-	.show_id{
+	.showId{
 		background-color:#4d806b;
 		color:white;
 		width:100%;
 	}
-	.show_id .id_text{
+	.showId .idText{
 		padding-left:30px;	
 	}
-	.show_content{
+	.showContent{
 		padding-bottom:10px;		
 		margin-bottom:2px;
 		width:100%;
@@ -187,53 +210,39 @@
 		text-align:left;
 		border:solid 1px #4d806b;
 	}
-	.show_content .show_left{
+	.showContent .showLeft{
 		float:left;
 		width:50%;	
 	}
-	.show_left .left_text{	
+	.showLeft .leftText{	
 		padding-left:30px;	
 	}
-	.show_content .show_right{
+	.showContent .showRight{
 		float:right;
 		width:50%;
 	}
+	.tweetBtn{
+		background-color:#00ACEE;
+	}	
+	.tweetBtn i{
+		color:white;	
+			
+	}
+	.deleteBtn{
+		color:gray;
+	}
 	
+	/*deleteの処理*/
 	.delete{
 		padding-top:250px;
 		text-align:center;
 		color:#8a2be2;
 	}
 	
-	footer{
-		background-color:gray;
-		width:100%;
-		height:65px;
-		margin-top: auto;
-	}
-	.footer_title {
-		font-size:18px;	
-		float:right;
-		padding-right:10px;
-		color:white;
-	}
-	.wrapper{
-		display: flex;
-		flex-direction: column;
-		min-height: 100vh;
-	}
+	/*tweetの処理*/
 	.tweet{
 		padding-top:250px;
 		text-align:center;
 		color:#8a2be2;
 	}
-	.tweet_btn{
-		background-color:#00ACEE;
-	}	
-	.tweet_btn i{
-		color:white;	
-			
-	}
-	.delete_btn{
-		color:gray;
-	}
+	

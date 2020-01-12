@@ -7,7 +7,7 @@ try{
 	$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); 
 	$st=$pdo->query("SELECT title FROM game");
 	while($games=$st->fetch()){
-		$game_titles[]=$games['title'];
+		$gameTitles[]=$games['title'];
 	}
 	
 }catch(PDOException $e){
