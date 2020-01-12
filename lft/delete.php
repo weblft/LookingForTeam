@@ -12,6 +12,11 @@ if(isset($_GET['id'])){
 $_SESSION['passFlag']=true;	
 
 
+if (isset($_SESSION['delete']) && $_SESSION['delete'] == true){
+	header('Location:index');
+	exit();
+}
+
 try{
 	$pdo = makeNewPdo();
 	$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); 
