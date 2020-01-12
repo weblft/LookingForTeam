@@ -30,7 +30,7 @@ elseif($_SESSION['tweetGati']==2){
 
 $tweetFlag=false;//tweetをできるかどうかを判定するための変数
 $_SESSION['passFlag']=true;//パスワードの入力があっているか判定するパスワードの入力があっているか判定するための変数。初めの入力のタイミングでエラ〜メッセージが出ないように最初はtrueにしておく。
-$message=$_SESSION['tweetTitle'].'のチームメンバーの募集を'.$gatiMessage.'で開始しました！'.'\n'.'詳しくは下記のurlから'.'\n'.'#LookingForTeam'.'\n#'.$_SESSION['tweetTitle'].'\n';//twiiterに送るメッセージ
+$message=$_SESSION['tweetTitle'].'のチームメンバーの募集を'.$gatiMessage.'で開始しました！'."\n".'詳しくは下記のurlから'."\n".'#LookingForTeam'."\n#".$_SESSION['tweetTitle']."\n";//twiiterに送るメッセージ
 $encodeMessage=urlencode($message);//エンコードしたメッセージ
 $url="https://weblft.herokuapp.com/show?searchTitle={$_SESSION['tweetTitle']}&id={$_SESSION['confirmId']}";
 $encodeUrl=urlencode($url);//エンコードしたurl
