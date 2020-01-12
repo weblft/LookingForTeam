@@ -30,7 +30,7 @@
 						else{
 							for($i=0;$i<count($gameTitles);$i++){
 								if($_GET['title']==$gameTitles[$i]){
-									echo '<h1>{$gameTitles[$i]}</h1>';
+									echo "<h1>{$gameTitles[$i]}</h1>";
 								}
 							}
 						}
@@ -76,7 +76,7 @@
 										<?php echo 'ガチ度:'.$data['gati'];?>
 										<form action='delete' method='get'>
 											<?php
-												echo '<input type='hidden' name='id' value={$data['showid']}>'; 
+												echo "<input type='hidden' name='id' value={$data['showid']}>"; 
 											?>
 											<button type='submit' name='delete' class='deleteBtn'>
 												<i class='fa fa-trash'></i>
