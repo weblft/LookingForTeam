@@ -56,7 +56,7 @@ try{
 		$pass=$st->fetch();
 		if(password_verify($passwd,$pass['pass'])){
 			$_SESSION['passFlag']=true;
-			$tweetflag=true;
+			$tweetFlag=true;
 		}
 		else{
 			$_SESSION['passFlag']=false;
