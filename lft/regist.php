@@ -74,8 +74,6 @@ try{
 		exit();
 		
 	}
-	$_SESSION['weekdayError']=true;
-	$_SESSION['holidayError']=true;
 }catch(PDOException $e){
 	echo 'Connection failed: ';
 	die($e->getMessage());
