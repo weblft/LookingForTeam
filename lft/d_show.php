@@ -13,6 +13,7 @@
 				<div class="headIndex">
 					<a href ="index">TOP</a><!--TOP画面に飛ばす -->
 					<a href ="regist">登録</a><!--登録画面に飛ばす -->
+					<a href='search'>検索</a><!--検索画面に飛ばす -->
 				</div>				
 				<div class="headName">
 					LFT
