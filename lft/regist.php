@@ -16,6 +16,8 @@ $showNum=(string)uniqid(rand(1000,9999));//idを作成。重複しないよう�
 $hashPass = password_hash($pass, PASSWORD_DEFAULT);//パスをハッシュ化
 date_default_timezone_set("Asia/Tokyo");//UTC->Asia/Tokyoへ
 $date=date("Y/m/d H:i:s");//日時
+$_SESSION['weekdayError']=true;
+$_SESSION['holidayError']=true;
 
 
 
