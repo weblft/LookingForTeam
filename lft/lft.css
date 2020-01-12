@@ -23,9 +23,8 @@
 		display:block;
 	}
 	.headIndex a{
-		line-height: 65px;
 		padding: 0 25px;
-		display: block;	
+		display:inline-block;
 	}
 	
 	header .headName{
