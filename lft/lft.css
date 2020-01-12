@@ -20,7 +20,7 @@
 		float:left;
 		width:124px;
 		padding:20px 20px;
-		display:inline-block;
+		display:block;
 	}
 	.headIndex a{
 		line-height: 65px;
