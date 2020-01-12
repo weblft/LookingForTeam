@@ -1,4 +1,6 @@
 <?php
+/*最初に表示する*/
+
 require_once "function.php";
 require_once 'PhotosContoroller.php';
 session_start();

@@ -1,4 +1,6 @@
 <?php 
+/*herokuでは画像を保管できないため、awsのs3を使って画像を登録して欲しい時に利用する処理を行う*/
+
 //SDKの読み込み
 require '../vendor/autoload.php';
 use Aws\S3\S3Client;

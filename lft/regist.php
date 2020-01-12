@@ -1,5 +1,8 @@
 <?php
-require_once "function.php";
+/*regist.phpはチーム募集を行うための情報を登録する処理を行う*/
+
+
+require_once 'function.php';
 require_once 'PhotosContoroller.php';
 $title=toHtml($_POST['registTitle']);//登録するタイトル
 $content=nl2br(toHtml($_POST['registText']),false);//募集要項の内容
@@ -14,8 +17,8 @@ $acount=toHtml($_POST['gameId']);//ゲームアカウント
 $check=0;//実装予定の削除用チェック
 $showNum=(string)uniqid(rand(1000,9999));//idを作成。重複しないように
 $hashPass = password_hash($pass, PASSWORD_DEFAULT);//パスをハッシュ化
-date_default_timezone_set("Asia/Tokyo");//UTC->Asia/Tokyoへ
-$date=date("Y/m/d H:i:s");//日時
+date_default_timezone_set('Asia/Tokyo');//UTC->Asia/Tokyoへ
+$date=date('Y/m/d H:i:s');//日時
 session_start();
 
 //confirm.phpから登録完了した後にregist.phpに戻れなくする処理
@@ -79,6 +82,6 @@ try{
 	die($e->getMessage());
 }
 $_SESSION['registed']=false;
-require "d_regist.php";
+require 'd_regist.php';
 
 ?>

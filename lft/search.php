@@ -1,4 +1,5 @@
 <?php
+/*検索条件を入力してshow.phpに飛ばす*/
 require_once 'function.php';
 require_once 'PhotosContoroller.php';
 

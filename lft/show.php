@@ -1,4 +1,6 @@
 <?php
+/*search.phpからの検索条件を受け取りその条件にあった情報を表示する*/
+
 require_once "function.php";
 require_once 'PhotosContoroller.php';
 $title=toHtml($_GET['title']);//ゲームタイトル

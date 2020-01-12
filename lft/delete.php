@@ -1,4 +1,5 @@
 <?php
+/*show.phpからの削除依頼を受け取り削除を行う*/
 require_once "function.php";
 require_once 'PhotosContoroller.php';
 session_start();

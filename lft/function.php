@@ -1,4 +1,6 @@
 <?php
+/*関数の保管場所*/
+
 header('X-FRAME-OPTIONS: DENY');//クリックジャギング対策
 function makeNewPdo(){
 	$db = parse_url($_SERVER['CLEARDB_DATABASE_URL']);

@@ -1,4 +1,6 @@
 <?php
+/*show.phpからのツイート依頼を受け取りツイートを行う*/
+
 require_once "function.php";
 require_once 'PhotosContoroller.php';
 session_start();

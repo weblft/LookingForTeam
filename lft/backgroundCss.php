@@ -1,4 +1,5 @@
 <?php 
+/*背景をs3から取ってきて利用する*/
 header('Content-Type:text/css; charset=utf-8'); 
 session_start(); 
 ?>
