@@ -52,7 +52,6 @@
 						<input type="text" name="gameId" required>
 						<br>
 						<?php
-							session_start();
 							if($_SESSION['weekdayError']==false){
 							echo '<p>⚠︎平日の活動時刻より平日の終了時刻を遅くしてください。</p>';
 							}
@@ -89,7 +88,6 @@
 						<br>
 						
 						<?php
-							session_start();
 							if($_SESSION['holidayError']==false){
 							echo '<p>⚠︎休日の活動時刻より休日の終了時刻を遅くしてください。</p>';
 							}
