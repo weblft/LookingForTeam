@@ -1,7 +1,7 @@
 <?php
 /*show.phpからのツイート依頼を受け取りツイートを行う*/
 
-require_once "function.php";
+require_once 'function.php';
 require_once 'PhotosContoroller.php';
 session_start();
 
@@ -9,19 +9,19 @@ $passwd=toHtml($_POST['passwd']);
 
 
 if($_SESSION['tweetGati']==1){
-	$gatiMessage= "ガチ度１(楽しくやろう)";
+	$gatiMessage= 'ガチ度１(楽しくやろう)';
 }
 elseif($_SESSION['tweetGati']==2){
-	$gatiMessage="ガチ度2(強くなりたい)";
+	$gatiMessage='ガチ度2(強くなりたい)';
 }
 elseif($_SESSION['tweetGati']==2){
-	$gatiMessage="ガチ度3(スクリムよくやる)";
+	$gatiMessage='ガチ度3(スクリムよくやる)';
 }
 elseif($_SESSION['tweetGati']==2){
-	$gatiMessage="ガチ度4(積極的に大会出場)";
+	$gatiMessage='ガチ度4(積極的に大会出場)';
 }	
 elseif($_SESSION['tweetGati']==2){
-	$gatiMessage="ガチ度5(プロを目指す)";
+	$gatiMessage='ガチ度5(プロを目指す)';
 }
 
 
@@ -30,9 +30,9 @@ elseif($_SESSION['tweetGati']==2){
 
 $tweetFlag=false;//tweetをできるかどうかを判定するための変数
 $_SESSION['passFlag']=true;//パスワードの入力があっているか判定するパスワードの入力があっているか判定するための変数。初めの入力のタイミングでエラ〜メッセージが出ないように最初はtrueにしておく。
-$message=$_SESSION['tweetTitle'].'のチームメンバーの募集を'.$gatiMessage.'で開始しました！'."\n".'詳しくは下記のurlから'."\n".'#LookingForTeam'."\n#".$_SESSION['tweetTitle']."\n";//twiiterに送るメッセージ
+$message=$_SESSION['tweetTitle'].'のチームメンバーの募集を'.$gatiMessage.'で開始しました！'.'\n'.'詳しくは下記のurlから'.'\n'.'#LookingForTeam'.'\n#'.$_SESSION['tweetTitle'].'\n';//twiiterに送るメッセージ
 $encodeMessage=urlencode($message);//エンコードしたメッセージ
-$url="https://weblft.herokuapp.com/show?searchTitle={$_SESSION['tweetTitle']}&id={$_SESSION['confirmId']}";
+$url='https://weblft.herokuapp.com/show?searchTitle={$_SESSION['tweetTitle']}&id={$_SESSION['confirmId']}';
 $encodeUrl=urlencode($url);//エンコードしたurl
 
 //はじめに受け取ったidとタイトルを保管しておく
@@ -52,7 +52,7 @@ try{
 	$pdo = makeNewPdo();
 	$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); 
 	if($_POST['tweet']&&isset($passwd)){
-		$st=$pdo->prepare("SELECT pass FROM registration WHERE showid=?");
+		$st=$pdo->prepare('SELECT pass FROM registration WHERE showid=?');
 		$st->bindValue(1,$_SESSION['confirmId'],PDO::PARAM_STR);
 		$st->execute();
 		$pass=$st->fetch();
@@ -68,5 +68,5 @@ try{
 	echo 'Connection failed: ';
 	die($e->getMessage());
 }
-require "d_tweet.php"
+require 'd_tweet.php'
 ?>

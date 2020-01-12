@@ -6,7 +6,7 @@ require_once 'PhotosContoroller.php';
 try{
 	$pdo=makeNewPdo();
 	$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); 
-	$st=$pdo->query("SELECT title FROM game");
+	$st=$pdo->query('SELECT title FROM game');
 	while($games=$st->fetch()){
 		$gameTitles[]=$games['title'];
 	}
@@ -17,5 +17,5 @@ try{
 }
 
 
-require "d_search.php";
+require 'd_search.php';
 ?>
