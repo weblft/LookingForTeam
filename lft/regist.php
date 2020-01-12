@@ -16,13 +16,6 @@ $showNum=(string)uniqid(rand(1000,9999));//idを作成。重複しないよう�
 $hashPass = password_hash($pass, PASSWORD_DEFAULT);//パスをハッシュ化
 date_default_timezone_set("Asia/Tokyo");//UTC->Asia/Tokyoへ
 $date=date("Y/m/d H:i:s");//日時
-$_SESSION['weekdayError']=true;
-$_SESSION['holidayError']=true;
-
-
-
-
-
 session_start();
 
 //登録が完了した時の処理
@@ -51,8 +44,7 @@ try{
 			header('Location:regist.php');
 			exit();
 		}
-		$_SESSION['w_error']=true;
-		$_SESSION['h_error']=true;
+		
 		$pdo=makeNewPdo();
 		$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 		$st=$pdo->prepare("INSERT INTO registration(title,detail,age,W_start,W_end,H_start,H_end,pass,gati,end_check,acount_name,showid,num,date) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
@@ -79,6 +71,8 @@ try{
 		exit();
 		
 	}
+	$_SESSION['weekdayError']=true;
+	$_SESSION['holidayError']=true;
 }catch(PDOException $e){
 	echo 'Connection failed: ';
 	die($e->getMessage());
