@@ -2,16 +2,17 @@
 require_once "function.php";
 require_once 'PhotosContoroller.php';
 session_start();
-
+$_SESSION['passFlag']=true;	
 $passwd=toHtml($_POST['passwd']);
+
 //$_GET['id']を初期化されないように$_SESSION['confirmId']に保持しておく処理
 if(isset($_GET['id'])){
 	$_SESSION['confirmId']=$_GET['id'];
 	unset($_GET['id']);
 }
-$_SESSION['passFlag']=true;	
 
 
+//confirm.phpから削除完了した後にdelete.phpに戻れなくするための処理
 if (isset($_SESSION['delete']) && $_SESSION['delete'] == true){
 	header('Location:index');
 	exit();

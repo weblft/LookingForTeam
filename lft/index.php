@@ -4,7 +4,7 @@ require_once 'PhotosContoroller.php';
 session_start();
 //ここは見直す
 $_SESSION['registed']=false;//confirm.phpから登録完了した後にregist.phpに戻れなくするためにfalseにする。
-$_SESSION['delete']=false;//show.phpから削除完了した後にconfirm.phpに戻れなくするためにfalseにする。
+$_SESSION['delete']=false;//confirm.phpから削除完了した後にdelete.phpに戻れなくするためにfalseにする。
 $_SESSION['holidayError']=true;//
 $_SESSION['weekdayError']=true;//
 $_SESSION['idJudge']=true;

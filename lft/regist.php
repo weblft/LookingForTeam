@@ -18,7 +18,7 @@ date_default_timezone_set("Asia/Tokyo");//UTC->Asia/Tokyoへ
 $date=date("Y/m/d H:i:s");//日時
 session_start();
 
-//登録が完了した時の処理
+//confirm.phpから登録完了した後にregist.phpに戻れなくする処理
 if (isset($_SESSION['registed']) && $_SESSION['registed'] == true){
 	header('Location:index');
 	exit();

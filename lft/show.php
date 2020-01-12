@@ -6,7 +6,7 @@ $wStart=toHtml($_GET['weekdayStart']);//平日の開始時刻
 $hStart=toHtml($_GET['holidayStart']);//休日の開始時刻
 $age=toHtml($_GET['age']);//年齢
 $gati=toHtml($_GET['gati']);//ガチ度
-$i=0;//d_show.phpの投稿のカウントに使用
+$count=0;//d_show.phpの投稿のカウントに使用
 if($_GET['id']){
 	$id=toHtml($_GET['id']);
 }

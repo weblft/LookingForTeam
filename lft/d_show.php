@@ -38,7 +38,7 @@
 				</div>
 				<div class="showContents">
 					<?php while(($data=$st2->fetch())==TRUE):?>
-						<?php $i++ ;?>
+						<?php $count++ ;?>
 						<div class='showContent'>
 							<div class="showId">
 								<div class='idText'>
@@ -101,7 +101,7 @@
 						</div>
 					<?php endwhile?>
 					<?php
-						if($i==0){
+						if($count==0){
 							echo '<h2>まだその条件では登録されていないので、よかったらあなたが登録してください！</h2>';
 						}
 					?>
