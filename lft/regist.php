@@ -53,7 +53,7 @@ try{
 			}
 		$pdo=makeNewPdo();
 		$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-		$st=$pdo->prepare("INSERT INTO registration(title,detail,age,W_start,W_end,H_start,H_end,pass,gati,end_check,acount_name,showid,num,date) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
+		$st=$pdo->prepare("INSERT INTO registration(title,detail,age,weekdayStart,weekdayStop,holidayStart,holidayStop,pass,gati,endCheck,acountName,showId,num,date) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
 		$st->bindValue(1,$title,PDO::PARAM_STR);
 		$st->bindValue(2,$content,PDO::PARAM_STR);
 		$st->bindValue(3,$age,PDO::PARAM_INT);
@@ -73,7 +73,7 @@ try{
 		$_SESSION['registTitle']=$title;//tweetするために登録したタイトルを保持しておく
 		$_SESSION['registId']=$showNum;//tweetしたurlに検索用につけるためのidを保持しておく
 		$_SESSION['registGati']=$gati;//tweetするために登録したタイトルを保持しておく
-		header('Location:confirm.php');
+		header('Location:confirm');
 		exit();
 		
 	}

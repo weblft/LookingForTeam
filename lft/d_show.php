@@ -42,7 +42,7 @@
 						<div class='showContent'>
 							<div class='showId'>
 								<div class='idText'>
-									<?php echo 'id: '.$data['showid'].' ['.$data['date'].']<br>';?>
+									<?php echo 'id: '.$data['showId'].' ['.$data['date'].']<br>';?>
 								</div>
 							</div>
 							<div class=showMain>
@@ -71,12 +71,12 @@
 											}
 										?>
 										<br>
-										<?php echo '平日の活動時間:'.$data['W_start'].'時〜'.$data['W_end'].'時<br>'; ?>
-										<?php echo '休日の活動時間:'.$data['H_start'].'時〜'.$data['H_end'].'時<br>'; ?>
+										<?php echo '平日の活動時間:'.$data['weekdayStart'].'時〜'.$data['weekdayStop'].'時<br>'; ?>
+										<?php echo '休日の活動時間:'.$data['holidayStart'].'時〜'.$data['holidayStop'].'時<br>'; ?>
 										<?php echo 'ガチ度:'.$data['gati'];?>
 										<form action='delete' method='get'>
 											<?php
-												echo "<input type='hidden' name='id' value={$data['showid']}>"; 
+												echo "<input type='hidden' name='id' value={$data['showId']}>"; 
 											?>
 											<button type='submit' name='delete' class='deleteBtn'>
 												<i class='fa fa-trash'></i>
@@ -84,7 +84,7 @@
 										</form>
 										<form action='tweet' method='get'>
 											<?php
-												echo "<input type='hidden' name='id' value={$data['showid']}>";
+												echo "<input type='hidden' name='id' value={$data['showId']}>";
 												echo "<input type='hidden' name='title' value={$data['title']}>";
 												echo "<input type='hidden' name='gati' value={$data['gati']}>";
 											?>

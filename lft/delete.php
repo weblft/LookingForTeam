@@ -25,12 +25,12 @@ try{
 	
 	//削除ボタンが押された時に行う処理
 	if($_POST['delete']&&isset($passwd)){
-		$st=$pdo->prepare('SELECT pass FROM registration WHERE showid=?');
+		$st=$pdo->prepare('SELECT pass FROM registration WHERE showId=?');
 		$st->bindValue(1,$_SESSION['confirmId'],PDO::PARAM_STR);
 		$st->execute();
 		$pass=$st->fetch();
 		if(password_verify($passwd,$pass['pass'])){
-			$st=$pdo->prepare('DELETE FROM registration WHERE showid=?');
+			$st=$pdo->prepare('DELETE FROM registration WHERE showId=?');
 			$st->bindValue(1,$_SESSION['confirmId'],PDO::PARAM_STR);//bindValueはsqlインジェクション対策
 			$st->execute();
 			$_SESSION['delete']=true;	

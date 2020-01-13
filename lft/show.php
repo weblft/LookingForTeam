@@ -31,7 +31,7 @@ try{
 		}
 	//twitterからのidでの検索
 	if(isset($id)&&$id!=''){
-		$st2=$pdo->prepare('SELECT * FROM registration WHERE showid=?');
+		$st2=$pdo->prepare('SELECT * FROM registration WHERE showId=?');
 		$st2->bindValue(1,$id,PDO::PARAM_STR);	
 		$st2->execute();
 	}
@@ -42,7 +42,7 @@ try{
 		else{
 			if($_GET['searchTitle']=='anythingTitle'){
 				if($age==-1 && $wStart!=-1&& $hStart!=-1&& $gati!=-1){//ageのみ指定なし
-					$st2=$pdo->prepare('SELECT * FROM registration WHERE gati=? AND W_start<=? AND W_end>? AND H_start<=? AND H_end>? ORDER BY num DESC');
+					$st2=$pdo->prepare('SELECT * FROM registration WHERE gati=? AND weekdayStart<=? AND weekdayStop>? AND holidayStart<=? AND holidayStop>? ORDER BY num DESC');
 					$st2->bindValue(1,$gati,PDO::PARAM_INT);
 					$st2->bindValue(2,$wStart,PDO::PARAM_INT);
 					$st2->bindValue(3,$wStart,PDO::PARAM_INT);
@@ -52,7 +52,7 @@ try{
 				}
 				
 				elseif($age!=-1 && $wStart==-1&& $hStart!=-1&& $gati!=-1){//wStartのみ指定なし
-					$st2=$pdo->prepare('SELECT * FROM registration WHERE age=? AND gati=? AND H_start<=? AND H_end>? ORDER BY num DESC' );
+					$st2=$pdo->prepare('SELECT * FROM registration WHERE age=? AND gati=? AND holidayStart<=? AND holidayStop>? ORDER BY num DESC' );
 					$st2->bindValue(1,$age,PDO::PARAM_INT);
 					$st2->bindValue(2,$gati,PDO::PARAM_INT);
 					$st2->bindValue(3,$hStart,PDO::PARAM_INT);
@@ -60,7 +60,7 @@ try{
 					$st2->execute();
 				}
 				elseif($age!=-1 && $wStart!=-1&& $hStart==-1&& $gati!=-1){//hStartのみ指定なし
-					$st2=$pdo->prepare('SELECT * FROM registration WHERE age=? AND gati=? AND W_start<=? AND W_end>? ORDER BY num DESC');
+					$st2=$pdo->prepare('SELECT * FROM registration WHERE age=? AND gati=? AND weekdayStart<=? AND weekdayStop>? ORDER BY num DESC');
 					$st2->bindValue(1,$age,PDO::PARAM_INT);
 					$st2->bindValue(2,$gati,PDO::PARAM_INT);
 					$st2->bindValue(3,$wStart,PDO::PARAM_INT);
@@ -68,7 +68,7 @@ try{
 					$st2->execute();
 				}
 				elseif($age!=-1 && $wStart!=-1&& $hStart!=-1&& $gati==-1){//ガチ度のみ指定なし
-					$st2=$pdo->prepare('SELECT * FROM registration WHERE age=? AND W_start<=? AND W_end>? AND H_start<=? AND H_end>? ORDER BY num DESC');
+					$st2=$pdo->prepare('SELECT * FROM registration WHERE age=? AND weekdayStart<=? AND weekdayStop>? AND holidayStart<=? AND holidayStop>? ORDER BY num DESC');
 					$st2->bindValue(1,$age,PDO::PARAM_INT);
 					$st2->bindValue(2,$wStart,PDO::PARAM_INT);
 					$st2->bindValue(3,$wStart,PDO::PARAM_INT);
@@ -77,7 +77,7 @@ try{
 					$st2->execute();
 				}
 				elseif($age!=-1 && $wStart!=-1&& $hStart!=-1&& $gati!=-1){//全て指定したとき
-					$st2=$pdo->prepare('SELECT * FROM registration WHERE age=? AND gati=? AND W_start<=? AND W_end>? AND H_start<=? AND H_end>? ORDER BY num DESC');
+					$st2=$pdo->prepare('SELECT * FROM registration WHERE age=? AND gati=? AND weekdayStart<=? AND weekdayStop>? AND holidayStart<=? AND holidayStop>? ORDER BY num DESC');
 					$st2->bindValue(1,$age,PDO::PARAM_INT);
 					$st2->bindValue(2,$gati,PDO::PARAM_INT);
 					$st2->bindValue(3,$wStart,PDO::PARAM_INT);
@@ -87,21 +87,21 @@ try{
 					$st2->execute();
 				}
 				elseif($age==-1 && $wStart==-1&& $hStart!=-1&& $gati!=-1){//ageとwStartが指定なし
-					$st2=$pdo->prepare('SELECT * FROM registration WHERE age=? AND gati=? AND H_start<=? AND H_end>? ORDER BY num DESC');
+					$st2=$pdo->prepare('SELECT * FROM registration WHERE age=? AND gati=? AND holidayStart<=? AND holidayStop>? ORDER BY num DESC');
 					$st2->bindValue(1,$gati,PDO::PARAM_INT);
 					$st2->bindValue(2,$hStart,PDO::PARAM_INT);
 					$st2->bindValue(3,$hStart,PDO::PARAM_INT);
 					$st2->execute();
 				}
 				elseif($age==-1 && $wStart!=-1&& $hStart==-1&& $gati!=-1){//ageとhStartが指定なし
-					$st2=$pdo->prepare('SELECT * FROM registration WHERE  gati=? AND W_start<=? AND W_end>? ORDER BY num DESC');
+					$st2=$pdo->prepare('SELECT * FROM registration WHERE  gati=? AND weekdayStart<=? AND weekdayStop>? ORDER BY num DESC');
 					$st2->bindValue(1,$gati,PDO::PARAM_INT);
 					$st2->bindValue(2,$wStart,PDO::PARAM_INT);
 					$st2->bindValue(3,$wStart,PDO::PARAM_INT);
 					$st2->execute();
 				}
 				elseif($age==-1 && $wStart!=-1&& $hStart!=-1&& $gati==-1){//ageとガチ度が指定なし
-					$st2=$pdo->prepare('SELECT * FROM registration WHERE W_start<=? AND W_end>=? AND H_start<=? AND H_end>? ORDER BY num DESC');
+					$st2=$pdo->prepare('SELECT * FROM registration WHERE weekdayStart<=? AND weekdayStop>=? AND holidayStart<=? AND holidayStop>? ORDER BY num DESC');
 					$st2->bindValue(1,$wStart,PDO::PARAM_INT);
 					$st2->bindValue(2,$wStart,PDO::PARAM_INT);
 					$st2->bindValue(3,$hStart,PDO::PARAM_INT);
@@ -115,7 +115,7 @@ try{
 					$st2->execute();
 				}
 				elseif($age!=-1 && $wStart==-1&& $hStart!=-1&& $gati==-1){//wStartとガチ度が指定なし
-					$st2=$pdo->prepare('SELECT * FROM registration WHERE age=? AND H_start<=? AND H_end>? ORDER BY num DESC');
+					$st2=$pdo->prepare('SELECT * FROM registration WHERE age=? AND holidayStart<=? AND holidayStop>? ORDER BY num DESC');
 					$st2->execute(array($age,$hStart,$hStart));
 					$st2->bindValue(1,$age,PDO::PARAM_INT);
 					$st2->bindValue(2,$hStart,PDO::PARAM_INT);
@@ -123,7 +123,7 @@ try{
 					$st2->execute();
 				}
 				elseif($age!=-1 && $wStart!=-1&& $hStart==-1&& $gati==-1){//hStartとガチ度が指定なし
-					$st2=$pdo->prepare('SELECT * FROM registration WHERE age=? AND W_start<=? AND W_end>? ORDER BY num DESC');
+					$st2=$pdo->prepare('SELECT * FROM registration WHERE age=? AND weekdayStart<=? AND weekdayStop>? ORDER BY num DESC');
 					$st2->bindValue(1,$age,PDO::PARAM_INT);
 					$st2->bindValue(2,$wStart,PDO::PARAM_INT);
 					$st2->bindValue(3,$wStart,PDO::PARAM_INT);
@@ -135,13 +135,13 @@ try{
 					$st2->execute();
 				}
 				elseif($age==-1 && $wStart==-1&& $hStart!=-1&& $gati==-1){//ageとwStartとガチ度が指定なし
-					$st2=$pdo->prepare('SELECT * FROM registration WHERE (H_start<=? AND H_end>?) ORDER BY num DESC');
+					$st2=$pdo->prepare('SELECT * FROM registration WHERE (holidayStart<=? AND holidayStop>?) ORDER BY num DESC');
 					$st2->bindValue(1,$hStart,PDO::PARAM_INT);
 					$st2->bindValue(2,$hStart,PDO::PARAM_INT);
 					$st2->execute();
 				}
 				elseif($age==-1 && $wStart!=-1&& $hStart==-1&& $gati==-1){//ageとhStartとガチ度が指定なし
-					$st2=$pdo->prepare('SELECT * FROM registration WHERE W_start<=? AND W_end>? ORDER BY num DESC');
+					$st2=$pdo->prepare('SELECT * FROM registration WHERE weekdayStart<=? AND weekdayStop>? ORDER BY num DESC');
 					$st2->bindValue(1,$wStart,PDO::PARAM_INT);
 					$st2->bindValue(2,$wStart,PDO::PARAM_INT);
 					$st2->execute();
@@ -156,7 +156,7 @@ try{
 			}
 			else{
 				if($age==-1 && $wStart!=-1&& $hStart!=-1&& $gati!=-1){//ageのみ指定なし
-					$st2=$pdo->prepare('SELECT * FROM registration WHERE title=? AND gati=? AND W_start<=? AND W_end>? AND H_start<=? AND H_end>? ORDER BY num DESC');
+					$st2=$pdo->prepare('SELECT * FROM registration WHERE title=? AND gati=? AND weekdayStart<=? AND weekdayStop>? AND holidayStart<=? AND holidayStop>? ORDER BY num DESC');
 					$st2->bindValue(1,$title,PDO::PARAM_INT);
 					$st2->bindValue(2,$gati,PDO::PARAM_INT);
 					$st2->bindValue(3,$wStart,PDO::PARAM_INT);
@@ -166,7 +166,7 @@ try{
 					$st2->execute();
 				}
 				elseif($age!=-1 && $wStart==-1&& $hStart!=-1&& $gati!=-1){//wStartのみ指定なし
-					$st2=$pdo->prepare('SELECT * FROM registration WHERE title=? AND age=? AND gati=? AND H_start<? AND H_end>? ORDER BY num DESC');
+					$st2=$pdo->prepare('SELECT * FROM registration WHERE title=? AND age=? AND gati=? AND holidayStart<? AND holidayStop>? ORDER BY num DESC');
 					$st2->bindValue(1,$title,PDO::PARAM_INT);
 					$st2->bindValue(2,$age,PDO::PARAM_INT);
 					$st2->bindValue(3,$gati,PDO::PARAM_INT);
@@ -175,7 +175,7 @@ try{
 					$st2->execute();
 				}
 				elseif($age!=-1 && $wStart!=-1&& $hStart==-1&& $gati!=-1){//hStartのみ指定なし
-					$st2=$pdo->prepare('SELECT * FROM registration WHERE title=? AND age=? AND gati=? AND W_start<=? AND W_end>? ORDER BY num DESC');
+					$st2=$pdo->prepare('SELECT * FROM registration WHERE title=? AND age=? AND gati=? AND weekdayStart<=? AND weekdayStop>? ORDER BY num DESC');
 					$st2->bindValue(1,$title,PDO::PARAM_INT);
 					$st2->bindValue(2,$age,PDO::PARAM_INT);
 					$st2->bindValue(3,$gati,PDO::PARAM_INT);
@@ -184,7 +184,7 @@ try{
 					$st2->execute();
 				}
 				elseif($age!=-1 && $wStart!=-1&& $hStart!=-1&& $gati==-1){//ガチ度のみ指定なし
-					$st2=$pdo->prepare('SELECT * FROM registration WHERE title=? AND age=? AND W_start<=? AND W_end>? AND H_start<=? AND H_end>? ORDER BY num DESC');
+					$st2=$pdo->prepare('SELECT * FROM registration WHERE title=? AND age=? AND weekdayStart<=? AND weekdayStop>? AND holidayStart<=? AND holidayStop>? ORDER BY num DESC');
 					$st2->bindValue(1,$title,PDO::PARAM_INT);
 					$st2->bindValue(2,$age,PDO::PARAM_INT);
 					$st2->bindValue(3,$wStart,PDO::PARAM_INT);
@@ -194,7 +194,7 @@ try{
 					$st2->execute();
 				}
 				elseif($age!=-1 && $wStart!=-1&& $hStart!=-1&& $gati!=-1){//全て指定したとき
-					$st2=$pdo->prepare('SELECT * FROM registration WHERE title=? AND age=? AND gati=? AND W_start<=? AND W_end>? AND H_start<=? AND H_end>? ORDER BY num DESC');
+					$st2=$pdo->prepare('SELECT * FROM registration WHERE title=? AND age=? AND gati=? AND weekdayStart<=? AND weekdayStop>? AND holidayStart<=? AND holidayStop>? ORDER BY num DESC');
 					$st2->bindValue(1,$title,PDO::PARAM_INT);
 					$st2->bindValue(2,$age,PDO::PARAM_INT);
 					$st2->bindValue(3,$gati,PDO::PARAM_INT);
@@ -205,7 +205,7 @@ try{
 					$st2->execute();
 				}
 				elseif($age==-1 && $wStart==-1&& $hStart!=-1&& $gati!=-1){//ageとwStartが指定なし
-					$st2=$pdo->prepare('SELECT * FROM registration WHERE title=? AND age=? AND gati=? AND H_start<=? AND H_end>? ORDER BY num DESC');
+					$st2=$pdo->prepare('SELECT * FROM registration WHERE title=? AND age=? AND gati=? AND holidayStart<=? AND holidayStop>? ORDER BY num DESC');
 					$st2->bindValue(1,$title,PDO::PARAM_INT);
 					$st2->bindValue(2,$gati,PDO::PARAM_INT);
 					$st2->bindValue(3,$hStart,PDO::PARAM_INT);
@@ -213,7 +213,7 @@ try{
 					$st2->execute();
 				}
 				elseif($age==-1 && $wStart!=-1&& $hStart==-1&& $gati!=-1){//ageとhStartが指定なし
-					$st2=$pdo->prepare('SELECT * FROM registration WHERE title=? AND gati=? AND W_start<=? AND W_end>? ORDER BY num DESC');
+					$st2=$pdo->prepare('SELECT * FROM registration WHERE title=? AND gati=? AND weekdayStart<=? AND weekdayStop>? ORDER BY num DESC');
 					$st2->bindValue(1,$title,PDO::PARAM_INT);
 					$st2->bindValue(2,$age,PDO::PARAM_INT);
 					$st2->bindValue(3,$wStart,PDO::PARAM_INT);
@@ -221,7 +221,7 @@ try{
 					$st2->execute();
 				}
 				elseif($age==-1 && $wStart!=-1&& $hStart!=-1&& $gati==-1){//ageとガチ度が指定なし
-					$st2=$pdo->prepare('SELECT * FROM registration WHERE title=? AND W_start<=? AND W_end>? AND H_start<=? AND H_end>? ORDER BY num DESC');
+					$st2=$pdo->prepare('SELECT * FROM registration WHERE title=? AND weekdayStart<=? AND weekdayStop>? AND holidayStart<=? AND holidayStop>? ORDER BY num DESC');
 					$st2->bindValue(1,$title,PDO::PARAM_INT);
 					$st2->bindValue(2,$wStart,PDO::PARAM_INT);
 					$st2->bindValue(3,$wStart,PDO::PARAM_INT);
@@ -237,7 +237,7 @@ try{
 					$st2->execute();
 				}
 				elseif($age!=-1 && $wStart==-1&& $hStart!=-1&& $gati==-1){//wStartとガチ度が指定なし
-					$st2=$pdo->prepare('SELECT * FROM registration WHERE title=? AND age=? AND H_start<=? AND H_end>? ORDER BY num DESC');
+					$st2=$pdo->prepare('SELECT * FROM registration WHERE title=? AND age=? AND holidayStart<=? AND holidayStop>? ORDER BY num DESC');
 					$st2->bindValue(1,$title,PDO::PARAM_INT);
 					$st2->bindValue(2,$age,PDO::PARAM_INT);
 					$st2->bindValue(3,$hStart,PDO::PARAM_INT);
@@ -245,7 +245,7 @@ try{
 					$st2->execute();
 				}
 				elseif($age!=-1 && $wStart!=-1&& $hStart==-1&& $gati==-1){//hStartとガチ度が指定なし
-					$st2=$pdo->prepare('SELECT * FROM registration WHERE title=? AND age=? AND W_start<=? AND W_end>? ORDER BY num DESC');
+					$st2=$pdo->prepare('SELECT * FROM registration WHERE title=? AND age=? AND weekdayStart<=? AND weekdayStop>? ORDER BY num DESC');
 					$st2->bindValue(1,$title,PDO::PARAM_INT);
 					$st2->bindValue(2,$age,PDO::PARAM_INT);
 					$st2->bindValue(3,$wStart,PDO::PARAM_INT);
@@ -259,14 +259,14 @@ try{
 					$st2->execute();
 				}
 				elseif($age==-1 && $wStart==-1&& $hStart!=-1&& $gati==-1){//ageとwStartとガチ度が指定なし
-					$st2=$pdo->prepare('SELECT * FROM registration WHERE title=? AND H_start<=? AND H_end>? ORDER BY num DESC');
+					$st2=$pdo->prepare('SELECT * FROM registration WHERE title=? AND holidayStart<=? AND holidayStop>? ORDER BY num DESC');
 					$st2->bindValue(1,$title,PDO::PARAM_INT);
 					$st2->bindValue(2,$hStart,PDO::PARAM_INT);
 					$st2->bindValue(3,$hStart,PDO::PARAM_INT);
 					$st2->execute();
 				}
 				elseif($age==-1 && $wStart!=-1&& $hStart==-1&& $gati==-1){//ageとhStartとガチ度が指定なし
-					$st2=$pdo->prepare('SELECT * FROM registration WHERE title=? AND W_start<=? AND W_end>? ORDER BY num DESC');
+					$st2=$pdo->prepare('SELECT * FROM registration WHERE title=? AND weekdayStart<=? AND weekdayStop>? ORDER BY num DESC');
 					$st2->bindValue(1,$title,PDO::PARAM_INT);
 					$st2->bindValue(2,$wStart,PDO::PARAM_INT);
 					$st2->bindValue(3,$wStart,PDO::PARAM_INT);
