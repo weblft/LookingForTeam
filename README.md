@@ -1,2 +1,2 @@
 # LookingForTeam
-herokuへデプロイ済み。 アクセスは[こちら][linkref]:weblft.herokuapp.com
+herokuへデプロイ済み。 アクセスは[こちら]( weblft.herokuapp.com)
