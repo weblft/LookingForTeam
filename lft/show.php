@@ -155,7 +155,7 @@ try{
 		}
 		else{
 			if($age==-1 && $wStart==-1&& $hStart==-1&& $gati==-1){//全て指定なし
-				$st2=$pdo->query('SELECT * FROM registration where title=? ORDER BY num DESC');
+				$st2=$pdo->prepare('SELECT * FROM registration where title=? ORDER BY num DESC');
 				$st2->bindValue(1,$title,PDO::PARAM_TEXT);
 				$st2->execute();
 			}
