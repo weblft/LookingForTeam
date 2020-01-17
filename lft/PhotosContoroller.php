@@ -8,8 +8,8 @@ use Aws\CommandPool;
 
 //s3を使うための処理
 $credentials=[
-'key'=>'************',//upするときは削除
-'secret'=>'*********',//upするときは削除
+'key'=>'AKIAIKMOX2QAIYAJKNWA',//upするときは削除
+'secret'=>'FmyqPEW31M/FNKw9561z2Sqyeg4JjeRuC7ys1vDP',//upするときは削除
 ];
 
 $bucketVersion='latest';
