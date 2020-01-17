@@ -228,7 +228,9 @@
 	.deleteBtn{
 		color:gray;
 	}
-	
+	.showNot{
+		text-align:center;
+	}
 	/*deleteの処理*/
 	.delete{
 		padding-top:250px;
