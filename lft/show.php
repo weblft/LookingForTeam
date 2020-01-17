@@ -36,7 +36,7 @@ try{
 		$st2->execute();
 	}
 	else{
-		if($_GET['searchTitle']=='anythingTitle'){
+		if($title=='anythingTitle'){
 			if($age==-1 && $wStart==-1&& $hStart==-1&& $gati==-1){//全て指定なし
 				$st2=$pdo->query('SELECT * FROM registration ORDER BY num DESC');
 			}
