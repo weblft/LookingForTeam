@@ -28,7 +28,21 @@
 					<form action='regist' method='post'>
 						Game title:
 						<select name='registTitle'>
-							<option value='League_of_Legends'>League of Legends</option><!--随時追加する--> 
+							<option value='Apex_Legends(PC)'>Apex_Legends(PC)</option><!--随時追加する--> 
+							<option value='Apex_Legends(PS4)'>Apex_Legends(PS4)</option>
+							<option value='Call_of_Duty(PC)'>Call_of_Duty(PC)</option>
+							<option value='Call_of_Duty(PS4)'>Call_of_Duty(PS4)</option>
+							<option value='CS:GO'>CS:GO</option>
+							<option value='Dota2'>Dota2</option>
+							<option value='League_of_Legends'>League of Legends</option>
+							<option value='Overwatch(PC)'>Overwatch(PC)</option>
+							<option value='Overwatch(PS4)'>Overwatch(PS4)</option>
+							<option value='Overwatch(Switch)'>Overwatch(Switch)</option>
+							<option value='PUBG'>PUBG</option>
+							<option value='Rainbow_six:Siege(PC)'>'Rainbow_six:Siege(PC)'</option>
+							<option value='Rainbow_six:Siege(PS4)'>'Rainbow_six:Siege(PS4)'
+							<option value='Splatoon2'>'splatoon2'</option>
+							</option>
 						</select>
 						<br>
 						募集要項:<br>
