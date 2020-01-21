@@ -31,7 +31,7 @@ try{
 		}
 	//twitterからのidでの検索
 	if(isset($id)&&$id!=''){
-		$st2=$pdo->prepare('SELECT * FROM registration WHERE showd=?');
+		$st2=$pdo->prepare('SELECT * FROM registration WHERE showid=?');
 		$st2->bindValue(1,$id,PDO::PARAM_STR);	
 		$st2->execute();
 	}
