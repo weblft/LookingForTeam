@@ -39,9 +39,9 @@
 							<option value='Overwatch(PS4)'>Overwatch(PS4)</option>
 							<option value='Overwatch(Switch)'>Overwatch(Switch)</option>
 							<option value='PUBG'>PUBG</option>
-							<option value='Rainbow_six:Siege(PC)'>'Rainbow_six:Siege(PC)'</option>
-							<option value='Rainbow_six:Siege(PS4)'>'Rainbow_six:Siege(PS4)'
-							<option value='Splatoon2'>'splatoon2'</option>
+							<option value='Rainbow_six:Siege(PC)'>Rainbow_six:Siege(PC)</option>
+							<option value='Rainbow_six:Siege(PS4)'>Rainbow_six:Siege(PS4)</option>
+							<option value='Splatoon2'>Splatoon2</option>
 							</option>
 						</select>
 						<br>
